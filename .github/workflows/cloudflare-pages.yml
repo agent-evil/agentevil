@@ -44,13 +44,16 @@ jobs:
       - name: Check required routes and JavaScript budget
         run: bun run audit:static
       - name: Start production preview
-        run: bun run preview --port 4322
+        run: bun run preview --port 4322 --background
       - name: Check browser interactions and local state
         run: bun run test:browser && bun run test:state
       - name: Check accessibility and keyboard navigation
         run: bun run test:a11y
       - name: Enforce Lighthouse scores of at least 95
         run: bun run test:lighthouse
+      - name: Stop production preview
+        if: always()
+        run: bunx --no-install astro preview stop
       - name: Save browser and Lighthouse reports
         if: always()
         uses: actions/upload-artifact@v4
