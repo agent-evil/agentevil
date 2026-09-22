@@ -2,7 +2,7 @@
 
 An independent, trilingual satire publication and AI Ideology Atlas, framed as a pirate broadcast hosted by a vain yeti.
 
-The site runs locally with six articles in English, Simplified Chinese and French, 25 trilingual Atlas entries, four themes and a working Reality Console. The GitHub repository and Cloudflare Pages project are created; the first CI deployment is being configured. Live GitHub comments remain optional and disconnected. See [the progress handoff](docs/PROGRESS.md), [verification record](docs/VERIFICATION.md), [source record](docs/SOURCES.md) and [project brief](docs/PROJECT-BRIEF.md).
+Live at [agentevil.com](https://agentevil.com), with six articles in English, Simplified Chinese and French, 25 trilingual Atlas entries, four themes and a working Reality Console. GitHub Actions deploys the validated static artifact to Cloudflare Pages. Live GitHub comments remain optional and disconnected. See [the progress handoff](docs/PROGRESS.md), [verification record](docs/VERIFICATION.md), [source record](docs/SOURCES.md) and [project brief](docs/PROJECT-BRIEF.md).
 
 ## Local development
 
@@ -39,11 +39,11 @@ Comments are disconnected until configured; follow [SETUP-GISCUS.md](SETUP-GISCU
 
 ## Deployment through GitHub Actions
 
-The workflow in `.github/workflows/cloudflare-pages.yml` validates pull requests to `main`. Pushes to `main` and manual runs on `main` deploy only after type checking, building, static validation, browser/state/keyboard/accessibility checks and Lighthouse pass. Pull requests do not receive deployment secrets or publish production. The exact validated `dist` artifact is uploaded, rather than rebuilt during deployment. Verification reports are retained even when a check fails. The workflow has not yet run on a remote repository.
+The workflow in `.github/workflows/cloudflare-pages.yml` validates pull requests to `main`. Pushes to `main` and manual runs on `main` deploy only after type checking, building, static validation, browser/state/keyboard/accessibility checks and Lighthouse pass. Pull requests do not receive deployment secrets or publish production. The exact validated `dist` artifact is uploaded, rather than rebuilt during deployment. Verification reports are retained even when a check fails. The [first successful release](https://github.com/agent-evil/agentevil/actions/runs/35691384357) passed all gates and deployed on September 22, 2026; see the progress handoff for the production commit and deployment ID.
 
 The current site fits Cloudflare Pages Free: it exports static files and does not invoke Pages Functions. The static audit enforces the Free plan's 20,000-file and 25 MiB-per-file limits. Static requests are free and unlimited under the [current Pages pricing](https://developers.cloudflare.com/pages/functions/pricing/); see the [platform limits](https://developers.cloudflare.com/pages/platform/limits/) for build and asset allowances. Domain registration/renewal and any separately enabled services are outside static hosting. The configured workflow builds in GitHub Actions and uses Direct Upload.
 
-1. Create a Cloudflare Pages **Direct Upload** project named `agentevil`, with `main` as the production branch. Alternatively, create it using `bunx wrangler pages project create agentevil --production-branch main` after authentication. If your project has a different name, update `wrangler.toml` and the `deploy:production` script in `package.json`.
+1. Create a Cloudflare Pages **Direct Upload** project named `agentevil`, with `main` as the production branch. Alternatively, create it using `bunx wrangler pages project create agentevil --production-branch main --force` after authentication. If your project has a different name, update `wrangler.toml` and the `deploy:production` script in `package.json`.
 2. In the GitHub repository or its `production` environment, add `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`. The token needs Account → Cloudflare Pages → Edit for the relevant account. Do not commit credentials.
 3. Push the finished application to `main`, or run the workflow manually on `main`. Configure `agentevil.com` in the project's Custom Domains settings and follow Cloudflare's DNS instructions. Creating a deployment does not automatically connect the domain.
 
@@ -55,7 +55,7 @@ For a manual upload of an already validated build:
 bun run deploy:production
 ```
 
-This requires Cloudflare authentication or the same two environment variables. The Pages project `agentevil` exists. The GitHub account ID secret is configured; a durable Pages API token and domain activation are still required before production can be reported live.
+This requires Cloudflare authentication or the same two environment variables. The production project, both GitHub deployment secrets and the custom domain are configured. The steps above document setup for a new installation; the deployed site has passed live route, metadata, header and 404 checks. In Wrangler 4.135, `--force` during new project creation explicitly selects Pages instead of the default Workers delegation; it is not needed for uploads to this existing project.
 
 Official references: [Cloudflare Direct Upload with CI](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/) and [Bun in GitHub Actions](https://bun.sh/guides/runtime/cicd).
 
@@ -68,6 +68,6 @@ Official references: [Cloudflare Direct Upload with CI](https://developers.cloud
 - `src/assets/yeti-broadcast-neutral.png`: active fictional editorial artwork, edited with AI assistance to remove the colored sun/disc; original artwork is retained unused.
 - `public/images/yeti-broadcast-neutral*.webp`: active optimized image variants.
 - `docs/DESIGN.md`: four-theme art direction and asset provenance.
-- `PROMPT.md`: detailed local Chinese implementation prompt, intentionally excluded from Git.
+- `../PROMPT.md` in the owner workspace: detailed Chinese implementation brief, stored outside this repository. A root-level `PROMPT.md` is also gitignored; clean clones use docs/PROJECT-BRIEF.md.
 
-The articles and translations have not been independently reviewed by a human editor. The About page discloses AI-assisted production, and articles distinguish fictional satire from sourced commentary. The source record documents the checks performed and their limits. Release setup status is recorded in the progress handoff; a created repository or project alone does not mean the site is deployed.
+The articles and translations have not been independently reviewed by a human editor. The About page discloses AI-assisted production, and articles distinguish fictional satire from sourced commentary. The source record documents the checks performed and their limits. The progress handoff records the deployed commit and completed verification.

@@ -1,6 +1,6 @@
 # Verification record
 
-Date: 2026-09-22. Local static build, Chrome/Chromium keyboard checks and automated accessibility checks. No production deployment or independent human fact-check is implied.
+Date: 2026-09-22. Final translated build validated in GitHub Actions and deployed to Cloudflare Pages. Automated checks do not imply independent human fact-checking.
 
 ## Environment and reproduction
 
@@ -18,24 +18,24 @@ bun run test:a11y
 bun run test:lighthouse
 ```
 
-Build before browser testing and keep `dist` stable until tests finish. Run Lighthouse separately from other local browser suites. Browser scripts default to the production preview above and accept `TEST_URL`. Full reports and screenshots are in ignored `test-results/`. CI runs the same gates before publishing the validated artifact and uploads reports even on failure; the remote workflow has not been executed.
+Build before browser testing and keep `dist` stable until tests finish. Run Lighthouse separately from other local browser suites. Browser scripts default to the production preview above and accept `TEST_URL`. Full reports and screenshots are in ignored `test-results/`. CI runs the same gates before publishing the validated artifact and uploads reports even on failure; the [release workflow](https://github.com/agent-evil/agentevil/actions/runs/35691384357) passed and deployed the validated artifact.
 
 ## Build, discovery and SEO
 
 - Astro check: 0 errors, 0 warnings, 0 hints.
 - Production build: 111 HTML pages, three RSS feeds, 108 indexable sitemap URLs, robots.txt, llms.txt and localized social images. The known upstream MDX `use astro:head-inject` warnings remain visible during build.
-- Static audit: 3,421 internal references including anchors/assets; content references; six items in each RSS feed; unique descriptions for indexable pages; exact canonical/hreflang destinations; robots and llms links; exclusion of error pages from the sitemap.
+- Static audit: 3,413 internal references including anchors/assets; content references; six items in each RSS feed; unique descriptions for indexable pages; exact canonical/hreflang destinations; robots and llms links; exclusion of error pages from the sitemap.
 - Every page has explicit Open Graph and Twitter title, description, image and image alternative text. OG includes PNG MIME type, HTTPS URL, dimensions, site name and alternate locales. All 21 active images are checked as actual 1200×630 PNGs, with one default plus six article covers in each language. Seven legacy URLs remain available.
-- Article metadata includes publication time, author disclosure URL, section and related Atlas tags. All 18 article routes have Article JSON-LD whose language matches the actual body. During the SEO run recorded above, the four articles without complete translations kept English language metadata and a visible fallback notice. Those four now have full Chinese and French bodies; see the translation check below. No modification dates, social account handles, endorsements or review claims were fabricated.
+- Article metadata includes publication time, author disclosure URL, section and related Atlas tags. All 18 article routes have Article JSON-LD whose language matches the actual body. Every article now has a full body in each language. Static validation also requires exactly one source body per slug and language; no English fallback is accepted for the launch content. No modification dates, social account handles, endorsements or review claims were fabricated.
 - All three error pages have `noindex, follow`. llms.txt is generated from content collections and explains fictional material, source limitations, AI-assisted production and translation coverage. It links to static HTML without implying that Markdown exports exist.
-- Conservative page JavaScript ceiling: 15,244 gzip bytes (14,940 shared plus 304 inline), below 51,200 bytes. Giscus remains separate and unloaded until requested/configured.
+- Conservative page JavaScript ceiling: 15,118 gzip bytes (14,814 shared plus 304 inline), below 51,200 bytes. Giscus remains separate and unloaded until requested/configured.
 - Cloudflare Pages Free asset checks: 169 static files; largest file 418,006 bytes. The audit enforces 20,000 files and 25 MiB per asset and rejects a generated Worker entry point. This checks build suitability, not live hosting behavior.
 
 ## Browser, keyboard and accessibility
 
 The 20-group browser matrix passed at 360px and 1440px, across four themes and both light/dark modes. It checks articles, consoles and all three homepages. Axe WCAG A/AA checks now include the trilingual homepages in every theme/mode, in addition to articles, consoles, the expanded language menu and three Atlas indexes. No failures were reported.
 
-The dedicated accessibility suite passed 120 groups: nine page types × three languages × two widths for both axe and forward/reverse page Tab traversal (108 groups), six console axe scans and six complete keyboard workflows. Rules include WCAG 2 A/AA, 2.1 AA and the available 2.2 AA rules. Page types include home, article index, translated article, English-body article, Atlas index/detail, About, incident file and error page.
+The dedicated accessibility suite passed 120 groups: nine page types × three languages × two widths for both axe and forward/reverse page Tab traversal (108 groups), six console axe scans and six complete keyboard workflows. Rules include WCAG 2 A/AA, 2.1 AA and the available 2.2 AA rules. Page types include home, article index, flagship article, translated satire article, Atlas index/detail, About, incident file and error page.
 
 Keyboard workflows cover the first-Tab skip link and actual focus transfer to main content, language-menu Enter/Tab/Escape, closing the menu when focus leaves it, visible focus rings, complete forward/reverse console traversal, Escape focus restoration, mobile note disclosure and search/clear focus. A final six-group targeted keyboard rerun also verifies Alt+E from a language choice returns focus to the visible language control. Its report is `test-results/keyboard-report.json`; it supplements the full `a11y-report.json`.
 
@@ -49,7 +49,7 @@ These are automated and keyboard checks, not a claim of complete WCAG conformanc
 
 ## Lighthouse
 
-All 12 mobile runs passed the >=95 gate in each category. These are sequential, local lab runs against the final production build, with no concurrent Agent Evil browser suite. They are not field measurements or a guarantee for every device. Raw JSON and `summary.json` are in `test-results/lighthouse/`.
+All 12 mobile runs passed the >=95 gate in each category. These are sequential lab runs in GitHub Actions against the final translated production build, with no concurrent Agent Evil browser suite. They are not field measurements or a guarantee for every device. Raw CI JSON and `summary.json` are in `test-results/ci-release/lighthouse/` (the workflow artifact stores them under `lighthouse/`).
 
 | Page | Performance | Accessibility | Best practices | SEO |
 | --- | ---: | ---: | ---: | ---: |
@@ -72,7 +72,7 @@ Checked after the four remaining articles received complete Simplified Chinese a
 
 The existing 20-group browser suite passed, including the Chinese and French think-for-yourself body language. A separate Chrome pass opened all eight new translations at 360px and 1440px. Each page used the translated body language, hid the English-body notice, showed four Evil notes, and had no horizontal overflow. Axe WCAG A/AA reported no violations on those sixteen views. On a 390px viewport the first Chinese note started collapsed, opened to its translated text, and closed again. The Chinese article index opened the think-for-yourself article, and the language control switched that same article to French. With JavaScript disabled, the Chinese trusting-agent page still showed the translated dialogue, 24 speeches and four open notes.
 
-Lighthouse and the 120-group keyboard suite were not repeated for this content change. The scores above describe the preceding build, when `/fr/posts/think-for-yourself/` still displayed an English body.
+The release CI repeated Lighthouse and the 120-group keyboard/accessibility suite after translation completion. Both passed. The scores above describe the translated release artifact. Downloaded CI evidence is stored locally in `test-results/ci-release/`; the Actions run retains the uploaded reports for seven days.
 
 ## Sources and untested integrations
 
@@ -80,6 +80,16 @@ Source availability results below are retained from September 19; external sourc
 
 Twenty-three distinct external source URLs were requested. Twenty-two returned HTTP 200. OECD denied the automated client with HTTP 403 but was accessible through the web reader. This checks availability, not correctness; see [SOURCES.md](SOURCES.md) for supporting scope and editorial limitations.
 
-No configured giscus repository exists. Its disconnected state was checked and no third-party script loads by default. Actual authentication, posting and live iframe synchronization require the owner to configure repository/category IDs. Cloudflare headers, redirects, GitHub Actions deployment, DNS and production performance remain untested because no remote deployment or account connection exists. Chromium was tested; Safari, Firefox and physical mobile devices were not.
+No configured giscus repository exists. Its disconnected state was checked and no third-party script loads by default. Actual authentication, posting and live iframe synchronization require the owner to configure repository/category IDs. Cloudflare headers, routing, DNS/TLS and GitHub Actions deployment have now been verified as recorded below. No production field-performance result or additional redirect configuration is claimed. Chromium was tested; Safari, Firefox and physical mobile devices were not.
 
-Raw screenshots and JSON reports are in ignored `test-results/`. Historical September 19 Lighthouse JSON files remain as `agent-evil-lighthouse-{en,zh,fr}.json`; current reports are under `test-results/lighthouse/`. The source records and this report are the durable summary; `/tmp` logs are disposable.
+Raw screenshots and JSON reports are in ignored `test-results/`. Historical September 19 Lighthouse JSON files remain as `agent-evil-lighthouse-{en,zh,fr}.json`; local reports are under `test-results/lighthouse/`, and final release CI reports are under `test-results/ci-release/lighthouse/`. The source records and this report are the durable summary; `/tmp` logs are disposable.
+
+## Production release
+
+- Source commit: `cc8e1abab3b0b1579abd49ff50d8d30da666c3f7`.
+- [GitHub Actions run 35691384357](https://github.com/agent-evil/agentevil/actions/runs/35691384357), attempt 2: success. Validation passed in attempt 1; only deployment was rerun after the owner added the repository API token. The earlier workflow-startup issue was fixed by explicitly backgrounding Astro preview and stopping it with an always-run cleanup step.
+- Cloudflare Pages production deployment: `04324999-e982-472f-987b-92009ce5627e`, https://04324999.agentevil.pages.dev. The deployment references the source commit above and reports success.
+- https://agentevil.com and https://agentevil.pages.dev returned HTTPS 200. Cloudflare reports active custom-domain verification and TLS validation. The owner configured the apex CNAME; public DNS resolvers 1.1.1.1 and 8.8.8.8 returned the Cloudflare addresses.
+- The live smoke check passed 47 requests, including all 18 translated articles, localized homes/indexes/Atlas/About/incident pages, RSS feeds, robots.txt, llms.txt, both sitemap files, three 1200×630 localized social images and a nonexistent route returning a real 404. Article body-language metadata, canonicals, social metadata and four notes per article were checked. Security headers include nosniff, frame denial, referrer policy and camera/microphone/geolocation restrictions.
+- The local DNS resolver retained a negative answer from before setup, so custom-domain HTTP checks used public/authoritative DNS addresses through curl's `--resolve`, with normal TLS hostname and certificate verification. A subsequent request using Cloudflare DNS-over-HTTPS also returned 200 without a pinned IP. These checks retain HTTPS validation. Raw results: `test-results/live-release.json`.
+- The local preview server is stopped. Agent Evil has no remaining Chrome/Chromium processes or agent-browser sessions; this release used the remote CI browser suites and HTTP checks locally.
