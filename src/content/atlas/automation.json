@@ -1,0 +1,38 @@
+{
+  "slug": "automation",
+  "category": "work",
+  "kind": "concept",
+  "related": [
+    "augmentation",
+    "ai-bubble",
+    "democratic-governance"
+  ],
+  "sources": [
+    {
+      "title": "ILO: Generative AI and Jobs, refined exposure index (2025)",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Automation and displacement",
+    "summary": "The substitution of machines for tasks previously performed by people, and the resulting changes in work. Task exposure, technical automability and actual job loss are different measures. Deployment decisions depend on cost, reliability, organization and demand, not capability alone.",
+    "case": "Automation can eliminate dangerous or tedious tasks and lower the cost of goods and services. These gains can be substantial even when the distribution of benefits remains a separate political problem.",
+    "criticism": "Jobs bundle many tasks, and new review or coordination labor may appear. Some workers face concentrated losses while benefits are dispersed. Retraining slogans do not settle questions of income, bargaining power or responsibility for transition costs.",
+    "evil": "The workflow is fully automated. The last employee handles everything the workflow does."
+  },
+  "zh": {
+    "title": "自动化与岗位替代",
+    "summary": "机器替代原本由人完成的任务，以及由此引起的工作变化。任务暴露度、技术可自动化程度和实际失业是不同指标。部署还受成本、可靠性、组织和需求影响，并非只看能力。",
+    "case": "自动化可能消除危险或繁琐任务，降低商品和服务成本。即使收益分配仍是政治问题，这些收益本身也可能真实而重要。",
+    "criticism": "一份工作包含多种任务，自动化也可能催生新的检查和协调劳动。损失可能集中在某些工人身上，收益却分散。再培训口号回答不了收入、议价能力与转型成本由谁承担。",
+    "evil": "流程已全自动。最后一名员工负责处理这个流程干出来的所有事。"
+  },
+  "fr": {
+    "title": "Automatisation et déplacement du travail",
+    "summary": "Remplacement par des machines de tâches auparavant humaines et transformations qui en résultent. Exposition des tâches, faisabilité technique et pertes d’emplois effectives sont des mesures distinctes. Coût, fiabilité, organisation et demande comptent aussi.",
+    "case": "L’automatisation peut supprimer des tâches dangereuses ou fastidieuses et réduire le coût des services. Ces gains peuvent être réels, même si leur répartition demeure un problème politique.",
+    "criticism": "Un métier rassemble plusieurs tâches et de nouveaux travaux de vérification apparaissent. Les pertes peuvent se concentrer tandis que les gains se dispersent. La reconversion ne résout pas à elle seule revenus, pouvoir de négociation et coûts de transition.",
+    "evil": "Le processus est entièrement automatisé. Le dernier salarié gère tout ce que le processus produit."
+  }
+}

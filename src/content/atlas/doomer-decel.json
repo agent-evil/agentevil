@@ -1,0 +1,42 @@
+{
+  "slug": "doomer-decel",
+  "category": "discourse",
+  "kind": "label",
+  "related": [
+    "eacc",
+    "pause-ai",
+    "evidence-centrism"
+  ],
+  "sources": [
+    {
+      "title": "e/acc: Principles and tenets (self-description, 2022)",
+      "url": "https://beff.substack.com/p/notes-on-eacc-principles-and-tenets"
+    },
+    {
+      "title": "PauseAI: Policy proposal",
+      "url": "https://pauseai.info/proposal"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "“Doomer” and “decel”",
+    "summary": "Loose internet labels often applied to people seen as pessimistic about AI or as wanting to slow development. They are frequently hostile descriptions rather than the person’s own identity. Their use in a debate reveals the speaker’s framing, not a reliable summary of the target’s beliefs.",
+    "case": "Labels can help readers recognize recurring rhetorical coalitions and the history of a discussion. Some people adopt a label ironically or use it to signal a real disagreement about pace and risk.",
+    "criticism": "The labels conflate researchers, advocates, critics and people with unrelated concerns. Describe the actual position: which risk, which proposed restriction, under what conditions? Neither name establishes that an argument is mistaken.",
+    "evil": "A peer-reviewed rebuttal, compressed into six letters and no reading."
+  },
+  "zh": {
+    "title": "“末日派”与“减速派”标签",
+    "summary": "网络上常用来称呼对 AI 悲观或希望放慢发展的人，往往带有敌意，不一定是当事人的自称。某人使用这些词，更多反映他的叙事方式，而不是被贴标签者的完整观点。",
+    "case": "标签可以帮助识别讨论中反复出现的修辞联盟与历史。有些人会反讽地认领，也有人借此表达对速度与风险的真实分歧。",
+    "criticism": "这些称呼常把研究者、倡议者、批评者和顾虑完全不同的人混为一谈。应该具体描述哪种风险、哪项限制、什么条件。一个外号不能证明论点错误。",
+    "evil": "同行评议压缩到了几个字。阅读环节也一并压缩没了。"
+  },
+  "fr": {
+    "title": "« Doomer » et « decel »",
+    "summary": "Étiquettes informelles visant souvent des personnes jugées pessimistes ou favorables au ralentissement de l’IA. Elles sont fréquemment hostiles plutôt qu’autorevendiquées. Leur usage renseigne sur le cadrage de l’orateur, pas sur l’ensemble des convictions de sa cible.",
+    "case": "Elles peuvent aider à reconnaître des coalitions rhétoriques et l’histoire d’un débat. Certaines personnes les reprennent ironiquement ou pour signaler un désaccord réel sur rythme et risque.",
+    "criticism": "Ces mots confondent chercheurs, militants et critiques aux préoccupations différentes. Précisons plutôt le risque, la restriction proposée et ses conditions. Une étiquette ne réfute pas un argument.",
+    "evil": "Une réfutation évaluée par les pairs, réduite à six lettres et dispensée de lecture."
+  }
+}

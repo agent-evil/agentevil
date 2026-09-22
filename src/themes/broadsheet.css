@@ -1,0 +1,10 @@
+@layer theme {
+ [data-theme="broadsheet"] { --bg:#f4f3ef; --panel:#eaece4; --text:#252923; --muted:#62685f; --accent:#365a44; --line:#c9cfc3; --display:'Newsreader Variable',Georgia,serif; --body:'Newsreader Variable',Georgia,serif; --headline-weight:500; --radius:0px; color-scheme:light; }
+ [data-theme="broadsheet"][data-mode="dark"] { --bg:#1b211d; --panel:#242e27; --text:#eeeede; --muted:#b4bcae; --accent:#a2cbb0; --line:#455448; color-scheme:dark; }
+ [data-theme="broadsheet"] .masthead { font-size:clamp(64px,12vw,166px); letter-spacing:-.065em; border-bottom:4px double var(--text); padding-block:30px; }
+ [data-theme="broadsheet"] .prose { font-size:22px; }
+ [data-theme="broadsheet"] .hero-title { font-size:clamp(38px,4.5vw,62px); letter-spacing:-.045em; }
+ [data-theme="broadsheet"] .article-title { font-size:clamp(38px,5vw,72px); }
+ [data-theme="broadsheet"] .evil-note-text { font-family:'Newsreader Variable',Georgia,serif; font-style:italic; font-size:18px; }
+ @media(max-width:760px) { [data-theme="broadsheet"] .masthead {font-size:12vw; letter-spacing:-.055em;} }
+}

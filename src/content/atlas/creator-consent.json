@@ -1,0 +1,38 @@
+{
+  "slug": "creator-consent",
+  "category": "culture",
+  "kind": "policy",
+  "related": [
+    "ai-art",
+    "open-source-ai",
+    "automation"
+  ],
+  "sources": [
+    {
+      "title": "US Copyright Office: Copyright and Artificial Intelligence",
+      "url": "https://www.copyright.gov/ai/"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Creator consent",
+    "summary": "The position that creators should have meaningful control over specified uses of their work in AI development or distribution. Proposals differ: opt-in licensing, opt-outs, collective bargaining, attribution or payment. Ethical consent and legal permission are related but distinct questions.",
+    "case": "Creative work takes labor, and training markets can shift bargaining power without a negotiated agreement. Clear permissions and workable licensing may support both creative livelihoods and legitimate technical experimentation.",
+    "criticism": "Who can grant consent for complex datasets? How do individual rights interact with quotation, research and expression? Jurisdictions differ, and not every use has the same legal status. This entry maps the debate; it is not legal advice.",
+    "evil": "They asked permission from everyone in the room. The people whose work filled the room were elsewhere."
+  },
+  "zh": {
+    "title": "创作者同意",
+    "summary": "主张创作者应能对其作品用于 AI 开发或传播的特定用途拥有实质控制。方案包括主动授权、退出机制、集体谈判、署名或报酬。伦理上的同意与法律上的许可有关联，但不是同一个问题。",
+    "case": "创作需要劳动，训练市场可能在没有协商的情况下改变议价关系。明确许可与可操作的授权机制，可能同时支持创作者生计和正当的技术试验。",
+    "criticism": "复杂数据集由谁授权？个人权利如何与引用、研究和表达相处？不同司法辖区规定不同，用途也不能一概而论。本条目解释争论，不提供法律意见。",
+    "evil": "他们征得了在场所有人的同意。作品堆满房间的那些人，恰好不在场。"
+  },
+  "fr": {
+    "title": "Consentement des créateurs",
+    "summary": "Position selon laquelle les créateurs devraient contrôler certains usages de leurs œuvres dans le développement ou la diffusion de l’IA. Les propositions varient : autorisation préalable, retrait, négociation collective, attribution ou paiement. Consentement éthique et permission juridique sont liés mais distincts.",
+    "case": "Créer demande du travail. Les marchés d’entraînement peuvent modifier le rapport de force sans accord négocié. Des permissions claires peuvent soutenir les métiers créatifs et l’expérimentation légitime.",
+    "criticism": "Qui autorise les corpus complexes ? Comment articuler droits, citation, recherche et expression ? Les règles diffèrent selon les juridictions et les usages. Cette entrée décrit le débat, sans constituer un conseil juridique.",
+    "evil": "Ils ont demandé l’accord de toute la salle. Les auteurs des œuvres qui la remplissaient étaient ailleurs."
+  }
+}

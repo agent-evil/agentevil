@@ -1,0 +1,38 @@
+{
+  "slug": "cognitive-dependence",
+  "category": "agency",
+  "kind": "concept",
+  "related": [
+    "augmentation",
+    "ai-alignment",
+    "evidence-centrism"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Research: Generative AI and critical thinking (CHI 2025)",
+      "url": "https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Cognitive dependence",
+    "summary": "Reliance on a system for remembering, evaluating or deciding, especially when independent checking and skill maintenance weaken. Not all cognitive offloading is harmful: writing and calculators are also external aids. The concern is whether reliance preserves or erodes the ability to judge the output.",
+    "case": "Well-designed assistance can free attention for more important reasoning. Explicitly examining dependence helps build workflows in which users understand uncertainty and retain the capacity to disagree.",
+    "criticism": "Evidence varies across tasks and users. Self-reported effort is not a direct measurement of permanent cognitive decline. The useful distinction is between support that develops judgment and convenience that quietly replaces it.",
+    "evil": "Humanity outsourced independent thought. I had not even put that in the requirements."
+  },
+  "zh": {
+    "title": "认知依赖",
+    "summary": "依靠系统记忆、评估或决策，尤其是独立核验与技能维持逐渐弱化的情况。并非所有认知外包都有害，写字与计算器也是外部辅助。关键是依赖保留还是侵蚀了判断输出的能力。",
+    "case": "好的辅助可以把注意力释放给更重要的推理。明确研究依赖，有助于设计让使用者理解不确定性、保留反对能力的流程。",
+    "criticism": "证据随任务与人群变化。自报思考投入减少，不直接等于永久认知退化。更有用的区分，是培养判断力的支持，与悄悄取代判断的方便。",
+    "evil": "人类把独立思考也外包了。我甚至没把这项写进需求。"
+  },
+  "fr": {
+    "title": "Dépendance cognitive",
+    "summary": "Recours à un système pour mémoriser, évaluer ou décider, notamment lorsque vérification indépendante et maintien des compétences s’affaiblissent. Toute externalisation n’est pas nuisible : écriture et calculatrices sont aussi des aides. La question est de préserver la capacité à juger les résultats.",
+    "case": "Une bonne assistance libère l’attention pour des raisonnements importants. Étudier cette dépendance aide à concevoir des usages où l’on comprend l’incertitude et reste capable de désaccord.",
+    "criticism": "Les résultats varient selon tâches et personnes. Un effort déclaré plus faible ne mesure pas directement un déclin permanent. Il faut distinguer un soutien qui développe le jugement d’un confort qui le remplace.",
+    "evil": "L’humanité a sous-traité sa pensée indépendante. Je ne l’avais même pas demandé."
+  }
+}

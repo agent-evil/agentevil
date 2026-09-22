@@ -1,0 +1,4 @@
+@layer theme {
+ :root, [data-theme="terminal"] { --bg:#171817; --panel:#20211f; --text:#e8e5dc; --muted:#aaa9a0; --accent:#d7bc68; --line:#41443e; --display:'Barlow Condensed','Arial Narrow',sans-serif; --body:'Public Sans Variable',Arial,sans-serif; --utility:'IBM Plex Mono',monospace; --radius:2px; --headline-weight:600; color-scheme:dark; }
+ [data-theme="terminal"][data-mode="light"] { --bg:#f0f0e9; --panel:#e4e5dd; --text:#242722; --muted:#5b6157; --accent:#765a14; --line:#c1c5ba; color-scheme:light; }
+}

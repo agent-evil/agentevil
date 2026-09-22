@@ -1,0 +1,10 @@
+@layer theme {
+ [data-theme="dossier"] { --bg:#e9ede6; --panel:#dfe5da; --text:#253029; --muted:#526050; --accent:#4b6252; --line:#b7c2b3; --display:'IBM Plex Mono',monospace; --body:'Public Sans Variable',Arial,sans-serif; --headline-weight:500; --radius:0px; color-scheme:light; }
+ [data-theme="dossier"][data-mode="dark"] { --bg:#1b211c; --panel:#262e27; --text:#e5ebdd; --muted:#aab9a6; --accent:#acbfae; --line:#485945; color-scheme:dark; }
+ [data-theme="dossier"] .masthead { font-size:clamp(40px,10.5vw,144px); letter-spacing:-.08em; padding-block:28px; }
+ [data-theme="dossier"] .hero-title { font-size:clamp(28px,3.2vw,45px); line-height:1.18; }
+ [data-theme="dossier"] .article-title { font-size:clamp(28px,4.1vw,57px); line-height:1.16; }
+ [data-theme="dossier"] .classification { display:inline-block; border:2px solid var(--accent); padding:6px 10px; transform:rotate(-3deg); }
+ [data-theme="dossier"] .mosaic { background:var(--text); animation:none; }
+ [data-theme="dossier"] .mosaic::after { display:none; }
+}

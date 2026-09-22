@@ -1,0 +1,7 @@
+---
+import { getLang, local } from '../lib/i18n';
+interface Props { size?: number; }
+const {size=4}=Astro.props;
+const lang = getLang(Astro.url);
+---
+<button type="button" class="censored" style={`--censor-width:${Math.max(3,Math.min(size,16))}ch`} aria-label={local(['censored expletive','已消音的脏话','juron censuré'],lang)} data-censored><span class="mosaic" aria-hidden="true"></span><span class="censor-tip" role="tooltip">{local(['UNTRANSLATABLE MACHINE EMOTION','无法翻译的机器情绪','ÉMOTION MACHINE INTRADUISIBLE'],lang)}</span></button>

@@ -1,0 +1,38 @@
+{
+  "slug": "dacc",
+  "category": "progress",
+  "kind": "movement",
+  "related": [
+    "eacc",
+    "public-compute",
+    "ai-sovereignty"
+  ],
+  "sources": [
+    {
+      "title": "Vitalik Buterin: d/acc, one year later (2025)",
+      "url": "https://vitalik.eth.limo/general/2025/01/05/dacc2.html"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Defensive accelerationism",
+    "summary": "d/acc is a self-described approach to accelerating technologies that strengthen defense and distribute power. Vitalik Buterin’s formulation links defensive, democratic and decentralized development. It is broader than AI and does not mean either unconditional acceleration or a blanket refusal to build.",
+    "case": "The pace of innovation is not the only choice. Its direction matters. Tools that make communities more resilient may reduce harm without concentrating control in a single protector.",
+    "criticism": "Whether a technology favors defense depends on context and deployment. Decentralization can complicate coordination, and useful defense can be repurposed. The difficult work is selecting and governing concrete projects, not choosing a reassuring prefix.",
+    "evil": "An accelerator with a steering wheel. A controversial innovation in this neighborhood."
+  },
+  "zh": {
+    "title": "防御性加速主义 d/acc",
+    "summary": "d/acc 主张加速增强防御、分散权力的技术。Vitalik Buterin 的表述把防御性、民主和去中心化联系在一起。它的范围大于 AI，也不等于无条件加速或一概拒绝建设。",
+    "case": "技术不只有“多快”这一种选择，还有“朝哪里发展”。让社群更有韧性的工具，可能降低伤害，同时避免把全部控制权交给一位保护者。",
+    "criticism": "技术偏向进攻还是防御，取决于情境和使用方式；去中心化也可能增加协调难度，防御工具可能被改作他用。真正困难的是选择和治理具体项目，不是挑一个令人安心的前缀。",
+    "evil": "给油门配了个方向盘。在这个圈子，竟然算争议性创新。"
+  },
+  "fr": {
+    "title": "Accélérationnisme défensif",
+    "summary": "Le d/acc propose d’accélérer les technologies qui renforcent la défense et répartissent le pouvoir. La formulation de Vitalik Buterin associe défense, démocratie et décentralisation. Cette approche dépasse l’IA et ne signifie ni accélération inconditionnelle ni refus général de construire.",
+    "case": "Le rythme n’est pas le seul choix : la direction compte. Des outils renforçant la résilience collective peuvent réduire les dommages sans confier tout le contrôle à un protecteur unique.",
+    "criticism": "L’avantage défensif dépend du contexte. La décentralisation complique parfois la coordination, et une défense peut être détournée. Le travail difficile consiste à choisir et gouverner des projets concrets, pas à adopter un préfixe rassurant.",
+    "evil": "Un accélérateur avec un volant. Une innovation controversée dans le quartier."
+  }
+}

@@ -1,0 +1,20 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { copy, categories, categoryName, kinds, local, path, type Lang } from '../lib/i18n';
+import { getPosts, postText } from '../lib/content';
+interface Props { lang: Lang; entry?: CollectionEntry<'atlas'> }
+const { lang, entry } = Astro.props;
+const t = copy[lang];
+const entries = await getCollection('atlas');
+const data = entry?.data, text = data?.[lang];
+const relatedPosts = entry ? (await getPosts(lang)).filter(post => post.data.relatedAtlas.includes(entry.data.slug)) : [];
+---
+{data && text ? <article data-atlas-entry={data.slug}>
+ <header class="page-intro"><a class="back-link" href={path(lang,'atlas/')}>← {t.backAtlas}</a><p class="eyebrow">{categoryName(data.category,lang)} · {local(kinds[data.kind],lang)}</p><h1>{text.title}</h1><p class="micro">{t.updated}: <time datetime={data.updated}>{data.updated}</time></p></header>
+ <div class="atlas-entry-grid"><div><div class="prose"><h2>{t.definition}</h2><p>{text.summary}</p><h2>{t.bestCase}</h2><p>{text.case}</p><h2>{t.tensions}</h2><p>{text.criticism}</p><div data-read-end aria-hidden="true"></div></div><section class="source-panel"><h2>{t.sources}</h2><p>{t.sourceNote}</p><ul>{data.sources.map(source => <li><a href={source.url}>{source.title}</a></li>)}</ul></section></div>
+ <aside class="atlas-aside"><div class="hero-heckle" data-evil><div class="voice-label">{t.commentary}</div><p>{text.evil}</p></div><h2>{t.related}</h2><div class="related-links">{data.related.map(slug => { const related = entries.find(item => item.data.slug === slug); return related && <a class="pill" href={path(lang,`atlas/${slug}/`)}>{related.data[lang].title}</a>; })}</div>{relatedPosts.length > 0 && <><h2>{t.relatedPosts}</h2><div class="related-links">{relatedPosts.map(post => <a class="pill" href={path(lang,`posts/${post.data.slug}/`)}>{postText(post,lang).title}</a>)}</div></>}</aside></div>
+ </article> : <>
+ <header class="page-intro"><p class="eyebrow">{t.atlasEyebrow}</p><h1>{t.atlasHeading}</h1><p class="deck">{t.atlasDescription}</p></header>
+ <form class="atlas-toolbar" role="search" data-atlas-search><label class="search-bar"><span class="sr-only">{t.searchLabel}</span><input type="search" name="q" placeholder={t.search} autocomplete="off"/></label><label><span class="sr-only">{t.filter}</span><select class="filter-select" name="category"><option value="">{t.allTopics}</option>{Object.keys(categories).map(id => <option value={id}>{categoryName(id,lang)}</option>)}</select></label><span class="micro" role="status" aria-live="polite"><span data-result-count>{entries.length}</span> {t.results}</span></form>
+ <div class="atlas-index"><nav class="topic-nav" aria-label={t.filter}>{Object.keys(categories).map(id => <a href={`#${id}`}>{categoryName(id,lang)}</a>)}</nav><div>{Object.keys(categories).map(id => <section class="atlas-group" id={id} data-atlas-group><h2>{categoryName(id,lang)}</h2><div class="atlas-items">{entries.filter(item => item.data.category === id).map(item => <a class="atlas-card" href={path(lang,`atlas/${item.data.slug}/`)} data-atlas-card data-category={id} data-search={`${item.data.slug} ${Object.values(item.data[lang]).join(' ')}`}><span class="micro">{local(kinds[item.data.kind],lang)}</span><h3>{item.data[lang].title}</h3><p>{item.data[lang].summary}</p></a>)}</div></section>)}<div class="empty-state" data-search-empty hidden><p>{t.noResults}</p><button type="button" data-clear-search>{t.clear}</button></div></div></div>
+ </>}

@@ -1,0 +1,1 @@
+{"extends":"astro/tsconfigs/strict","compilerOptions":{"types":["vite/client"]},"exclude":["dist","node_modules"]}

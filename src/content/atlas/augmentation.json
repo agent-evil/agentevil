@@ -1,0 +1,38 @@
+{
+  "slug": "augmentation",
+  "category": "work",
+  "kind": "concept",
+  "related": [
+    "automation",
+    "cognitive-dependence",
+    "public-compute"
+  ],
+  "sources": [
+    {
+      "title": "ILO: Generative AI and Jobs, refined exposure index (2025)",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Human augmentation",
+    "summary": "Using AI to extend what people can do while retaining meaningful human participation. Examples include drafting assistance, translation, analysis and accessibility tools. Augmentation describes a relationship within a workflow; it is not a guarantee that employment, autonomy or bargaining power will improve.",
+    "case": "Tools can reduce tedious work, widen access to expertise and help people perform tasks they could not otherwise complete. Complementarity may produce benefits that a simple replacement story misses.",
+    "criticism": "Who chooses the workflow and captures the gains? An assistant may help a worker today while enabling tighter monitoring or replacement tomorrow. Assessment should include learning, control, workload and compensation, not just output speed.",
+    "evil": "We have augmented the worker. They now supervise six mistakes at once."
+  },
+  "zh": {
+    "title": "人类增强",
+    "summary": "用 AI 扩展人的能力，同时保留有实质意义的人类参与，例如写作辅助、翻译、分析与无障碍工具。“增强”描述工作流程中的关系，不保证就业、自主性和议价能力一定改善。",
+    "case": "工具可以减少重复劳动、扩大专业知识的可及性，帮助人完成原本做不到的任务。互补性带来的收益，可能被简单的替代叙事漏掉。",
+    "criticism": "谁决定流程，谁拿走收益？今天的助手可能明天就支持更严密的监控或替代。评估应包含学习、控制、工作负担和报酬，不只看输出速度。",
+    "evil": "我们增强了员工。他现在可以同时监督六个错误。"
+  },
+  "fr": {
+    "title": "Augmentation humaine",
+    "summary": "Utiliser l’IA pour étendre les capacités tout en maintenant une participation humaine significative : rédaction, traduction, analyse ou accessibilité. Cela décrit une relation dans un processus, pas une garantie d’emploi, d’autonomie ou de pouvoir de négociation.",
+    "case": "Les outils peuvent réduire les tâches fastidieuses, élargir l’accès à l’expertise et permettre de nouvelles activités. La complémentarité crée des bénéfices qu’un récit de remplacement pur ignore.",
+    "criticism": "Qui choisit le processus et capte les gains ? L’assistance peut préparer une surveillance accrue ou un remplacement. Il faut mesurer apprentissage, contrôle, charge et rémunération, pas seulement vitesse.",
+    "evil": "Nous avons augmenté le salarié. Il supervise désormais six erreurs à la fois."
+  }
+}

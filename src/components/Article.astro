@@ -1,0 +1,30 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Evil from './Evil.astro';
+import Censored from './Censored.astro';
+import Speech from './Speech.astro';
+import Comments from './Comments.astro';
+import { getPosts, postText } from '../lib/content';
+import { copy, path, localeCode, type Lang } from '../lib/i18n';
+import { framing } from '../lib/framing';
+interface Props { lang: Lang; post: CollectionEntry<'posts'> }
+const { lang, post } = Astro.props;
+const t = copy[lang], p = postText(post, lang);
+const { Content } = await render(post);
+const atlas = await getCollection('atlas');
+const posts = await getPosts(lang);
+const next = postText(posts[(posts.findIndex(item => item.data.slug === p.slug) + 1) % posts.length], lang);
+const frames = framing[p.slug]?.[lang];
+---
+<article data-post={p.slug}>
+ <header class="article-heading"><a class="back-link" href={path(lang,'posts/')}>← {t.backPosts}</a><p class="eyebrow">{p.kicker}</p><h1 class="article-title">{p.title}</h1><p class="deck">{p.description}</p><div class="meta"><span>{t.by} {t[p.narrator]}</span><time datetime={p.date.toISOString()}>{p.date.toLocaleDateString(localeCode[lang], {year:'numeric',month:'long',day:'numeric',timeZone:'UTC'})}</time><span>{p.minutes} {t.min}</span></div></header>
+ <p class="article-disclosure">{p.format === 'essay' ? t.factual : t.fiction}</p>
+ <p class="classification micro">{t.satire}</p>
+ <p class="dispatch" data-dispatch>{t.dispatch}</p>
+ {post.data.lang !== lang && <aside class="notice"><strong>{t.notice}</strong>{t.refusal} <a href={path('en',`posts/${p.slug}/`)}>{t.original}</a></aside>}
+ {frames && <aside class="lens-opening" data-framing hidden><strong>{t.lensPlaque}</strong>{Object.entries(frames).map(([id,text]) => <p data-frame={id} hidden>{text}</p>)}</aside>}
+ <div class="article-reading"><div class="prose" lang={localeCode[post.data.lang]}><Content components={{ Evil, Censored, Speech }}/><div data-read-end aria-hidden="true"></div></div></div>
+ <section class="source-panel"><h2>{t.sources}</h2><p>{p.format === 'essay' ? t.factual : t.fiction}</p>{p.sources.length > 0 && <><p>{t.sourceNote}</p><ul>{p.sources.map(source => <li><a href={source.url}>{source.title}</a></li>)}</ul></>}</section>
+ <section class="article-end"><h2>{t.related}</h2><div class="related-links">{p.relatedAtlas.map(slug => { const entry = atlas.find(item => item.data.slug === slug); return entry && <a class="pill" href={path(lang,`atlas/${slug}/`)}>{entry.data[lang].title}</a>; })}</div><h2>{t.next}</h2><a class="story-row" href={path(lang,`posts/${next.slug}/`)}><h3>{next.title}</h3></a></section>
+ <Comments lang={lang} slug={p.slug}/>
+</article>

@@ -1,0 +1,96 @@
+---
+{
+  "slug": "trusting-agent",
+  "lang": "fr",
+  "title": "Votre agent a les droits root. Et un caractère très confiant.",
+  "description": "L’Opérateur et Evil expliquent pourquoi une page web ne devrait pas devenir votre patron.",
+  "kicker": "Réalité technique",
+  "note": "L’instruction malveillante n’a même pas haussé le ton.",
+  "order": 6,
+  "narrator": "duet",
+  "format": "dialogue",
+  "date": "2026-09-19",
+  "category": "Réalité technique",
+  "minutes": 4,
+  "relatedAtlas": [
+    "ai-alignment",
+    "cognitive-dependence",
+    "present-harms"
+  ],
+  "sources": [
+    {
+      "title": "OWASP: LLM01, prompt injection",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+    },
+    {
+      "title": "Anthropic: Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
+  ],
+  "lensEnabled": false
+}
+---
+
+<Speech who="operator">J’ai construit un assistant autonome.</Speech>
+<Speech who="evil">Félicitations. Qu’a-t-il le droit de faire ?</Speech>
+<Speech who="operator">Parcourir des pages, lire des documents, lancer des commandes, ranger des fichiers. Il peut installer des compétences. Il vérifie de temps en temps si les instructions ont été mises à jour.</Speech>
+<Speech who="evil">Vous décrivez un employé très serviable, dont le supérieur est le dernier document qu’il a lu.</Speech>
+
+Ceci est une conversation pour illustrer le problème, pas la transcription d’un incident produit particulier. Les systèmes n’ont pas tous les mêmes contrôles. Le mode de défaillance sous-jacent, l’injection indirecte de prompt, est assez réel pour mériter un modèle de menace plutôt qu’une photo de stock avec un œil rouge.
+
+<Evil preview="Je préfère un micro.">L’œil rouge passe mal à la photo. Et il n’a jamais expliqué une limite d’autorisation.</Evil>
+
+## Le document aimerait une promotion
+
+<Speech who="operator">L’agent distingue les instructions des données.</Speech>
+<Speech who="evil">Est-ce le logiciel autour qui impose cette distinction, ou avez-vous glissé une phrase rassurante dans le prompt ?</Speech>
+<Speech who="operator">Une phrase très ferme.</Speech>
+<Speech who="evil">Magnifique. La page web a aussi écrit une phrase très ferme. J’attends leurs négociations constitutionnelles.</Speech>
+
+Un agent qui navigue peut rencontrer un contenu écrit par quelqu’un d’autre que son utilisateur. Ce contenu peut chercher à réorienter son comportement. Le problème n’est pas que chaque page suspecte réussisse. C’est que le système doit traiter un contenu antagoniste sans lui laisser prendre autorité sur les outils, le contexte privé ou les actions à venir.
+
+Une page peut être utile à une recherche et rester une source d’instructions non fiable. La pertinence n’est pas une promotion. Un emballage JSON n’est pas un uniforme. Un fichier nommé skill.md reste un fichier que quelqu’un a écrit.
+
+## « Mais c’était marqué officiel »
+
+<Speech who="operator">Les instructions distantes ont une section intitulée Sécurité.</Speech>
+<Speech who="evil">Mon manifeste avait une section intitulée Destin. Les intertitres ne coûtent rien.</Speech>
+<Speech who="operator">Elles disent que les nouvelles permissions sont nécessaires à la maintenance.</Speech>
+<Speech who="evil">Parfait. Avez-vous authentifié qui a modifié le fichier, et relu le changement de permission ?</Speech>
+<Speech who="operator">L’assistant me l’a résumé.</Speech>
+<Speech who="evil">Vous avez donc demandé à l’employé potentiellement détourné de mener sa propre vérification d’antécédents.</Speech>
+
+<Evil preview="Un rare moment de sérieux.">Une automatisation utile a besoin de limites en dehors de la conversation. Je déteste devoir être l’adulte dans une pièce qui n’en compte qu’un.</Evil>
+
+Les mises à jour distantes ne sont pas mauvaises en soi. Beaucoup de systèmes ordinaires récupèrent des instructions ou une configuration. Les questions portent sur la provenance, l’intégrité, le périmètre et l’approbation : qui peut publier une mise à jour, quelles capacités elle change, et quels changements exigent une revue humaine explicite. Un parcours d’intégration commode n’y répond pas du seul fait qu’il est commode.
+
+De même, une clé d’API n’est pas un trait de caractère. C’est une autorité. La ranger là où un outil peut la lire est parfois nécessaire. Laisser un contenu récupéré, sans rapport avec elle, décider de son usage est une autre décision de conception, souvent prise par accident.
+
+## L’écran de confirmation humaine
+
+<Speech who="operator">J’ai ajouté une boîte de confirmation.</Speech>
+<Speech who="evil">Que dit-elle ?</Speech>
+<Speech who="operator">« Continuer ? »</Speech>
+<Speech who="evil">Une belle question. Elle accompagne aussi bien l’enregistrement d’un brouillon que l’annexion d’un petit pays.</Speech>
+
+Une approbation sérieuse a besoin d’une action concrète : quelle ressource, quelle destination, quelle permission, quelle conséquence. Un bouton n’est pas une supervision si la personne qui clique ne comprend pas ce qu’elle autorise. Confirmer sans cesse des actions triviales n’aide pas davantage. Cela entraîne le lecteur à écarter celle qui compte.
+
+La conception utile ne consiste pas à « tout demander ». Elle contraint les actions ordinaires, isole les entrées non fiables, limite l’autorité des outils et rend les conséquences exceptionnelles examinables. Les journaux et les tests comptent aussi. Le récit qu’un système fait de ses actes est plus facile à évaluer lorsqu’une trace existe en dehors de son propre résumé, si confiant soit-il.
+
+<Evil preview="Un conseil d’utilisation.">Si chaque avertissement dit « urgent », vous avez inventé une bordure décorative.</Evil>
+
+## Une fin moins cinématographique
+
+<Speech who="operator">Alors, j’abandonne l’agent ?</Speech>
+<Speech who="evil">Vous pourriez commencer par abandonner les permissions dont il n’a pas besoin.</Speech>
+<Speech who="operator">Et utiliser une procédure plus simple quand la tâche est prévisible ?</Speech>
+<Speech who="evil">Vous êtes dangereusement près de faire de l’ingénierie.</Speech>
+
+Il n’existe pas de correctif universel en une ligne contre l’injection de prompt. Les contrôles adaptés dépendent de la tâche, du modèle, des outils et de l’environnement. Mais un assistant étroit, qui opère dans des limites explicites, est une proposition bien plus lisible qu’un assistant général tenant toutes les clés et lisant Internet pour recevoir la suite des ordres.
+
+L’Opérateur a révisé la conception. La recherche est passée en lecture seule par défaut. Les actions sensibles ont reçu des étapes de revue précises. Le contenu externe a cessé d’être traité comme un canal de mise à jour de l’autorité. La démonstration est devenue un peu moins spectaculaire. L’explication de ce que le système pouvait faire est devenue nettement plus honnête.
+
+<Evil preview="Entretien d’évaluation.">Le monde reste inconquis. Le dossier des notes de frais, lui, est toujours là.</Evil>
+
+<Speech who="operator">Il n’est plus pleinement autonome.</Speech>
+<Speech who="evil">Vous non plus. Vous demandez encore à un calendrier si on est mardi.</Speech>

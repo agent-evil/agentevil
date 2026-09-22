@@ -1,0 +1,42 @@
+{
+  "slug": "ai-alignment",
+  "category": "safety",
+  "kind": "research",
+  "related": [
+    "existential-risk",
+    "present-harms",
+    "cognitive-dependence"
+  ],
+  "sources": [
+    {
+      "title": "NIST: AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "The Alignment Problem from a Deep Learning Perspective",
+      "url": "https://arxiv.org/abs/2209.00626"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AI alignment",
+    "summary": "Research and engineering concerned with making system behavior match intended goals and constraints. The term covers different technical problems and different ideas about whose intentions matter. A model following a user’s request is not automatically behaving in a socially acceptable way.",
+    "case": "More capable systems can cause larger failures when objectives are misspecified or oversight is weak. Studying unwanted behavior, generalization and control before deployment can prevent avoidable harm.",
+    "criticism": "Whose values count, how conflicts are resolved, and whether observed compliance persists in new situations remain hard questions. Alignment also cannot substitute for access control, accountability or ordinary product testing.",
+    "evil": "Aligned with whom? An impolite question that keeps ruining a perfectly good adjective."
+  },
+  "zh": {
+    "title": "AI 对齐",
+    "summary": "让系统行为符合预期目标与约束的研究和工程工作。这个词涵盖不同技术问题，也包含对“谁的意图应该算数”的不同理解。模型服从某位用户，并不自动意味着其行为在社会层面可以接受。",
+    "case": "目标设定错误或监督薄弱时，更强的系统可能造成更大损失。部署前研究非预期行为、泛化和控制，有助于避免本可预防的伤害。",
+    "criticism": "谁的价值重要、冲突怎样解决、换了情境后是否仍然可靠，都很难。对齐也不能替代访问控制、责任制度与普通的产品测试。",
+    "evil": "和谁对齐？一个极不礼貌的问题，总是破坏这个完美的形容词。"
+  },
+  "fr": {
+    "title": "Alignement de l’IA",
+    "summary": "Recherche et ingénierie visant à faire correspondre le comportement des systèmes aux objectifs et contraintes souhaités. Le terme recouvre plusieurs problèmes techniques et conceptions des intentions pertinentes. Obéir à un utilisateur n’est pas nécessairement socialement acceptable.",
+    "case": "Des objectifs mal définis ou une supervision faible peuvent produire des échecs plus graves avec des systèmes plus capables. Étudier comportements indésirables, généralisation et contrôle permet de prévenir des dommages.",
+    "criticism": "Quelles valeurs retenir, comment arbitrer les conflits et vérifier la fiabilité hors des situations testées ? L’alignement ne remplace ni les permissions ni la responsabilité ni les tests ordinaires.",
+    "evil": "Aligné sur qui ? Une question mal élevée qui gâche un si bel adjectif."
+  }
+}

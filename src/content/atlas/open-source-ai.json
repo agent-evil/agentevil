@@ -1,0 +1,38 @@
+{
+  "slug": "open-source-ai",
+  "category": "openness",
+  "kind": "concept",
+  "related": [
+    "open-weights",
+    "closed-models",
+    "public-compute"
+  ],
+  "sources": [
+    {
+      "title": "Open Source Initiative: Open Source AI Definition 1.0",
+      "url": "https://opensource.org/ai/open-source-ai-definition"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Open-source AI",
+    "summary": "An approach to AI development emphasizing freedoms to use, study, modify and share a system. The Open Source Initiative’s AI definition specifies what must be available to exercise those freedoms. An accessible download alone does not establish that a release qualifies.",
+    "case": "Independent inspection, adaptation and reproducibility can reduce dependence on a provider and broaden participation. Communities can repair or specialize systems instead of waiting for the owner’s roadmap.",
+    "criticism": "The term is contested in practice, especially around training information and licensing. Formal freedom does not make compute affordable or prevent misuse. Judge the actual license and available materials, not the openness of the launch announcement.",
+    "evil": "The download link is equal for everyone. The electricity bill has declined to join the movement."
+  },
+  "zh": {
+    "title": "开源 AI",
+    "summary": "强调使用、研究、修改和分享系统自由的开发方式。开放源代码促进会的 AI 定义说明，为实践这些自由，需要提供哪些材料。能下载一个文件，并不自动证明整个系统符合开源标准。",
+    "case": "独立检查、适配和复现能减少对单一供应商的依赖，也让更多人参与。社区可以修复或专用化系统，不必等厂商排期。",
+    "criticism": "实践中这个词仍有争议，尤其是训练信息与许可证。形式上的自由既不会让算力自动便宜，也不会阻止滥用。应检查真实许可和材料，而不是发布会上“开放”的语气。",
+    "evil": "下载链接人人平等。电费账单拒绝加入这个运动。"
+  },
+  "fr": {
+    "title": "IA open source",
+    "summary": "Approche fondée sur les libertés d’utiliser, étudier, modifier et partager un système. La définition de l’Open Source Initiative précise les éléments nécessaires à ces libertés. Un fichier téléchargeable ne suffit pas à qualifier toute une publication.",
+    "case": "Inspection indépendante, adaptation et reproductibilité peuvent réduire la dépendance à un fournisseur. Des communautés peuvent corriger ou spécialiser les systèmes sans attendre sa feuille de route.",
+    "criticism": "Le terme reste disputé, notamment sur les informations d’entraînement et les licences. Une liberté formelle ne rend pas le calcul abordable et n’empêche pas les abus. Examinez les matériaux et la licence, pas le discours de lancement.",
+    "evil": "Le lien de téléchargement est égalitaire. La facture électrique refuse d’adhérer au mouvement."
+  }
+}

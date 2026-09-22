@@ -1,0 +1,6 @@
+---
+import { getLang, copy } from '../lib/i18n';
+interface Props { who:'operator'|'evil'; }
+const {who} = Astro.props;
+---
+<div class:list={['speech',`speech-${who}`]}><span class="speech-name">{copy[getLang(Astro.url)][who]}</span><div><slot /></div></div>

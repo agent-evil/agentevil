@@ -1,0 +1,9 @@
+---
+import { copy, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; slug: string }
+const { lang, slug } = Astro.props;
+const t = copy[lang];
+const config = {repo: import.meta.env.PUBLIC_GISCUS_REPO, repoId: import.meta.env.PUBLIC_GISCUS_REPO_ID, category: import.meta.env.PUBLIC_GISCUS_CATEGORY, categoryId: import.meta.env.PUBLIC_GISCUS_CATEGORY_ID};
+const connected = Object.values(config).every(Boolean);
+---
+<section class="comments" aria-labelledby="comments-title"><h2 id="comments-title">{t.comments}</h2>{connected ? <><p>{t.commentPrivacy}</p><button type="button" data-load-comments data-config={JSON.stringify(config)} data-term={`posts/${slug}`}>{t.commentLoad}</button><div class="giscus"></div></> : <p>{t.commentsEmpty}</p>}</section>

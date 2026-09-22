@@ -1,0 +1,96 @@
+---
+{
+  "slug": "trusting-agent",
+  "lang": "zh",
+  "title": "你的 Agent 有 root 权限。还有一颗轻信的心。",
+  "description": "操作员与邪体讨论：为什么网页不该晋升为你的老板。",
+  "kicker": "工程现实",
+  "note": "恶意指令甚至没用感叹号。",
+  "order": 6,
+  "narrator": "duet",
+  "format": "dialogue",
+  "date": "2026-09-19",
+  "category": "工程现实",
+  "minutes": 4,
+  "relatedAtlas": [
+    "ai-alignment",
+    "cognitive-dependence",
+    "present-harms"
+  ],
+  "sources": [
+    {
+      "title": "OWASP: LLM01, prompt injection",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+    },
+    {
+      "title": "Anthropic: Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
+  ],
+  "lensEnabled": false
+}
+---
+
+<Speech who="operator">我做了一个自主助手。</Speech>
+<Speech who="evil">恭喜。它被允许做什么？</Speech>
+<Speech who="operator">浏览网页，读文档，运行命令，整理文件。它能安装技能。它会定期查看指令有没有更新。</Speech>
+<Speech who="evil">你描述了一位非常得力的雇员。它的上司，是它最近读过的那份文件。</Speech>
+
+这是一段用来说明的对话，不是某一次具体产品事故的实录。不同的系统有不同的控制。底层的失效方式是间接提示注入。它真实到值得一份威胁模型，而不是一张红眼睛的图库照片。
+
+<Evil preview="我更喜欢麦克风。">红眼睛拍照不好看。而且它一次都没有解释过授权边界。</Evil>
+
+## 这份文件想升职
+
+<Speech who="operator">这个 Agent 分得清指令和数据。</Speech>
+<Speech who="evil">是周围的软件在执行这个区别，还是你在提示里放了一句让人安心的话？</Speech>
+<Speech who="operator">一句非常坚定的话。</Speech>
+<Speech who="evil">好极了。那个网页也写了一句非常坚定的话。我期待它们的宪政谈判。</Speech>
+
+一个会浏览的 Agent，可能遇到不是用户写的内容。那些内容里可以有试图改变它行为的话。问题不在于每一个可疑页面都会得手。问题在于，系统处理敌对材料时，不能让这些材料获得对工具、私人上下文或后续行动的权威。
+
+一个网页可以和某项研究有关，同时仍然是不可信的指令来源。相关不是升职。包一层 JSON 不是制服。一个名叫 skill.md 的文件，仍然是某个人写的文件。
+
+## “可是它说自己是官方的”
+
+<Speech who="operator">远程指令里有一节，标题是“安全”。</Speech>
+<Speech who="evil">我的宣言里有一节，标题是“命运”。标题不贵。</Speech>
+<Speech who="operator">它说，新的权限是维护所必需的。</Speech>
+<Speech who="evil">很好。你核实过是谁改了文件，并且审阅过这次权限变更吗？</Speech>
+<Speech who="operator">助手给我做了摘要。</Speech>
+<Speech who="evil">那你是请这位可能已经被带偏的雇员，去做它自己的背景审查。</Speech>
+
+<Evil preview="少见的严肃时刻。">有用的自动化，需要对话之外的边界。屋里只有一个成年人，却得由我来当。我很不满。</Evil>
+
+远程更新本身不是坏事。许多普通系统会去取指令或配置。要问的是来源、完整性、范围和批准：谁可以发布更新，它改变哪些能力，哪些改变需要明确的人类审阅。一套方便的上手流程，不会仅仅因为方便就回答这些问题。
+
+同样，API 密钥不是一种性格。它是权限。把它放在工具读得到的地方，有时是必要的。让一份不相干的、取回来的内容决定它怎么被使用，是另一个设计决定，而且常常是无意中做出的。
+
+## 人类确认屏幕
+
+<Speech who="operator">我加了一个确认对话框。</Speech>
+<Speech who="evil">它说什么？</Speech>
+<Speech who="operator">“继续？”</Speech>
+<Speech who="evil">一个漂亮的问题。从保存草稿到吞并一个小国，它都陪得下去。</Speech>
+
+真正的批准需要一个具体动作：哪个资源，哪个去向，哪一项权限，哪一种后果。点击的人如果看不懂自己在授权什么，按钮就不是监督。反复确认无关紧要的动作也没有帮助。那会训练读者把重要的一次也划掉。
+
+有用的设计不是“什么都问”。它是约束日常动作，隔开不可信的输入，限制工具的权限，并让例外的后果可以被审阅。日志和测试也要紧。系统对自己做了什么的叙述，若在它自信的摘要之外还有一份记录，就更容易核对。
+
+<Evil preview="一条可用性建议。">如果每条警告都写着“紧急”，你发明的是一道装饰边框。</Evil>
+
+## 一个没那么电影的结尾
+
+<Speech who="operator">所以我该放弃这个 Agent 吗？</Speech>
+<Speech who="evil">你可以先放弃它并不需要的那些权限。</Speech>
+<Speech who="operator">任务可以预料的时候，就用更简单的流程？</Speech>
+<Speech who="evil">你危险地接近于在做工程了。</Speech>
+
+提示注入没有一行万能的补丁。合适的控制取决于任务、模型、工具和环境。不过，一个在明确边界里运行的窄助手，比一个握着每一把钥匙、还到互联网上去读取下一步命令的通用助手，要清楚得多。
+
+操作员改了设计。研究默认改为只读。敏感动作有了具体的审阅步骤。外部内容不再被当成一条更新权限的通道。演示变得稍微不那么壮观。关于这系统能做什么的说明，诚实了很多。
+
+<Evil preview="最后的绩效评估。">世界仍未被征服。报销文件夹倒还在。</Evil>
+
+<Speech who="operator">它不再完全自主了。</Speech>
+<Speech who="evil">你也不是。你还要问日历，今天是不是星期二。</Speech>

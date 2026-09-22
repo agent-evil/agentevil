@@ -1,0 +1,14 @@
+---
+import { copy, path, languages, type Lang } from '../lib/i18n';
+import { information } from '../lib/information';
+interface Props { lang: Lang; kind: string }
+const { lang, kind } = Astro.props;
+const t = copy[lang], info = information[lang];
+---
+{kind === 'about/' ? <>
+ <header class="page-intro"><p class="eyebrow">{t.about}</p><h1>{info.aboutTitle}</h1></header>
+ <div class="about-grid"><div class="prose"><h2>{t.philosophy}</h2><p>{info.stance}</p><p>{info.character}</p><h2 id="production">{t.production}</h2><p>{info.production}</p><h2>{info.privacyLabel}</h2><p>{info.privacy}</p><h2>{info.correctionsLabel}</h2><p>{info.corrections}</p><p><a href={path(lang,'incident/')}>{t.file}</a></p><h2 id="rss">{t.rss}</h2><div class="rss-list">{languages.map(language => <a class="pill" href={path(language,'rss.xml')}>{language === 'en' ? 'English' : language === 'zh' ? '简体中文' : 'français'}</a>)}</div></div><figure><img src="/images/yeti-broadcast-neutral-small.webp" width="640" height="427" loading="lazy" alt={lang==='zh'?'邪体在麦克风前广播':lang==='fr'?'Evil, le yéti, devant son micro':'Evil the Yeti at his microphone'}/><figcaption class="art-caption">{t.illustration}</figcaption></figure></div>
+ </> : kind === 'incident/' ? <>
+ <header class="page-intro"><p class="eyebrow">{t.file}</p><h1>{info.incidentTitle}</h1><p class="deck">{info.incidentIntro}</p></header>
+ <div class="prose"><h2>{info.testimonyLabel}</h2><p>{info.testimony}</p><div class="timeline"><section><time datetime="2026-02-02">2026-02-02</time><h2>{info.securityLabel}</h2><p>{info.security}</p><a href="https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys">Wiz: Hacking Moltbook</a></section><section><time datetime="2026-02-04">2026-02-04</time><h2>{info.coverageLabel}</h2><p>{info.coverage}</p><a href="https://www.abc.net.au/news/2026-02-04/what-is-moltbook-the-new-social-media-platform-for-ai-bots/106298768">ABC: Moltbook</a></section></div><h2>{info.gapsLabel}</h2><p>{info.gaps}</p><h2>{info.correctionsLabel}</h2><p>{info.corrections}</p><div class="related-links"><a class="pill" href={path(lang,'posts/manifesto/')}>{t.read}</a><a class="pill" href={path(lang,'posts/maintenance/')}>{t.relatedPosts}</a></div></div>
+ </> : <div class="error-page"><p class="eyebrow">404</p><h1>{t.notFound}</h1><p class="deck">{t.notFoundText}</p><a class="button-link" href={path(lang)}>{t.returnHome}</a></div>}

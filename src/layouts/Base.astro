@@ -1,0 +1,70 @@
+---
+import '@fontsource/barlow-condensed/latin-600.css';
+import '@fontsource/barlow-condensed/latin-700.css';
+import '@fontsource-variable/public-sans';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource-variable/newsreader';
+import '@fontsource-variable/fredoka';
+import '../styles/global.css';
+import Console from '../components/Console.astro';
+import TopBar from '../components/TopBar.astro';
+import Icon from '../components/Icon.astro';
+import {copy,path,languages,localeCode,type Lang} from '../lib/i18n';
+import { ogLocale, socialImage, socialImageAlt, socialTagline, pageDescription } from '../lib/seo';
+interface Props {lang:Lang;route?:string;title?:string;description?:string;og?:string;ogTitle?:string;article?:boolean;}
+const {lang,route='',title='Agent Evil',description=pageDescription(lang,route),og=socialImage(lang),ogTitle=socialTagline[lang],article=false}=Astro.props;const t=copy[lang];
+const canonical=new URL(path(lang,route),Astro.site).href;
+const imageURL=new URL(og,Astro.site).href;
+const imageAlt=socialImageAlt(lang,ogTitle);
+const pageTitle=title==='Agent Evil'?'AGENT EVIL · '+t.tagline:title+' · Agent Evil';
+---
+<!doctype html>
+<html lang={localeCode[lang]} class="no-js" data-theme="terminal" data-mode="dark">
+ <head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script is:inline>
+   document.documentElement.classList.remove('no-js');
+   try {const s=JSON.parse(localStorage.getItem('evil:passenger:v1')||'{}');const r=document.documentElement;
+   if(['terminal','broadsheet','cartoon','dossier'].includes(s.theme))r.dataset.theme=s.theme;
+   if(['light','dark','system'].includes(s.lights))r.dataset.mode=s.lights==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):s.lights;
+   r.dataset.muted=s.muted===true?'true':'false';}catch{}
+  </script>
+  <title>{pageTitle}</title>
+  <meta name="description" content={description}/><meta name="theme-color" content="#171817"/>
+  <meta name="robots" content={route==='404/'?'noindex, follow':'index, follow, max-image-preview:large'}/>
+  <link rel="canonical" href={canonical}/>
+  {languages.map(l=><link rel="alternate" hreflang={localeCode[l]} href={new URL(path(l,route),Astro.site).href}/>)}
+  <link rel="alternate" hreflang="x-default" href={new URL(path('en',route),Astro.site).href}/>
+  <link rel="alternate" type="application/rss+xml" title={`Agent Evil (${lang})`} href={path(lang,'rss.xml')}/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/>
+  <link rel="describedby" type="text/plain" href="/llms.txt"/>
+  <meta property="og:title" content={pageTitle}/>
+  <meta property="og:description" content={description}/>
+  <meta property="og:type" content={article?'article':'website'}/>
+  <meta property="og:url" content={canonical}/>
+  <meta property="og:image" content={imageURL}/>
+  <meta property="og:image:secure_url" content={imageURL}/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content={imageAlt}/>
+  <meta property="og:site_name" content="Agent Evil"/>
+  <meta property="og:locale" content={ogLocale[lang]}/>
+  {languages.filter(l=>l!==lang).map(l=><meta property="og:locale:alternate" content={ogLocale[l]}/>)}
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content={pageTitle}/>
+  <meta name="twitter:description" content={description}/>
+  <meta name="twitter:image" content={imageURL}/>
+  <meta name="twitter:image:alt" content={imageAlt}/>
+  <slot name="head"/>
+ </head>
+ <body data-lang={lang}>
+  <a class="skip-link" href="#main">{t.skip}</a>
+  <TopBar lang={lang} route={route}/>
+  <main id="main" class="shell" tabindex="-1"><slot/></main>
+  <footer class="site-footer"><div class="shell"><div class="footer-top"><div><strong>{t.footer}</strong><p class="micro">{t.rights}</p></div><nav class="footer-links" aria-label={lang==='zh'?'页脚导航':lang==='fr'?'Navigation de pied de page':'Footer navigation'}><a href={path(lang,'incident/')}>{t.file}</a><a href={path(lang,'about/#production')}>{t.production}</a><a href={path(lang,'about/#rss')}>{t.rss}<Icon name="rss" size={14}/></a></nav></div><div class="footer-bottom"><span>© 2026 AGENT EVIL · {t.satire}</span><span data-coordinates>{t.dispatch}</span><span>{t.privacy}</span></div></div></footer>
+  <Console lang={lang} route={route}/>
+  <script>import '../lib/client';</script>
+ </body>
+</html>

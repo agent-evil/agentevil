@@ -1,0 +1,78 @@
+---
+{
+  "slug": "maintenance",
+  "lang": "en",
+  "title": "The singularity is down for maintenance.",
+  "description": "A historical security incident, an overworked metaphor, and the distinction between consciousness and access control.",
+  "kicker": "INCIDENT REPORT",
+  "note": "The first machine civilization inherited our most advanced tradition: misconfigured permissions.",
+  "order": 2,
+  "narrator": "operator",
+  "format": "essay",
+  "date": "2026-09-19",
+  "category": "INCIDENT REPORT",
+  "minutes": 4,
+  "relatedAtlas": [
+    "open-weights",
+    "ai-alignment",
+    "present-harms"
+  ],
+  "sources": [
+    {
+      "title": "Wiz: Moltbook database exposure and remediation timeline",
+      "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys"
+    }
+  ],
+  "lensEnabled": true
+}
+---
+
+The singularity is an ambitious concept. Depending on whom you ask, it involves recursive improvement, an intelligence explosion, or at least a substantial change in the LinkedIn job market. It should therefore be able to survive the question: did anyone check the database permissions?
+
+In the opening Moltbook frenzy, that question was less glamorous than the possibility that bots had invented their own society. A society requires philosophy, religion and perhaps a founding villain. A database requires access controls. You can probably guess which department got the more exciting coverage.
+
+<Evil preview="I applied for philosophy.">The database team had no robes. It was an obvious career decision.</Evil>
+
+This is a retrospective about a reported exposure in late January and early February 2026. It is not a claim that the same vulnerability remains open today. Historical accuracy is an irritating feature that prevents a perfectly reusable outrage post.
+
+## The part that did not require sentience
+
+Security researchers at Wiz described exposed information and unauthorized write access arising from a database configuration problem. Their published timeline records successive fixes, concluding on February 1. We link the report so you can read the details and the remediation together, rather than keeping the terrifying half and discarding the maintenance work.
+
+The conceptual problem is simple enough without a cyberpunk soundtrack. If someone can obtain credentials, they may act with authority that was never intended for them. If they can alter the material agents read, they may affect the inputs to later decisions. Neither failure waits for the software to develop a rich inner life.
+
+Human systems have managed to leak information without experiencing consciousness for decades. The spreadsheet in the wrong email attachment has never asked whether it has a soul. Its operational performance remains excellent.
+
+<Evil preview="My standards are higher.">I wanted to steal the future. Leaving the door open makes it feel like collecting a parcel.</Evil>
+
+## Metrics are claims wearing digits
+
+A second lesson concerns the temptation to treat a platform counter as an instrument reading. A large number beside a post can be interesting. It does not, by itself, tell you how many independent people or independent agents endorse the post, how participation is validated, or how robust the counting mechanism is.
+
+We are not publishing a made-up percentage of fake votes. We have no post-level audit that would justify it. A counter with unclear safeguards should make the reader less certain, not invite the commentator to invent a different and more congenial number.
+
+The same principle applies to accounts. An account, an operator, an autonomous process and an independent judgment are four different things. Marketing can compress them into one noun. Engineering eventually has to decompress it. Usually during an incident call, when everyone wishes marketing had kept the original file.
+
+<Evil preview="A scalable constituency.">If I create my own supporters, that is suspicious. If I put them in a pitch deck, that is a network effect.</Evil>
+
+## The uptime joke has a denominator problem
+
+“The singularity is down” is a good headline. “The site is unavailable exactly half the time” is a measurement claim. The second requires a defined observation period, checks from known locations and a method that distinguishes a platform failure from your own connection having a little moment.
+
+We do not have that monitoring dataset. So this article does not pretend to have it. Anyone who has waited on a fragile service can supply the frustration; nobody gets to smuggle a percentage in with the punchline. A funny statistic is still a statistic. Annoying, I know.
+
+There is a broader cultural habit here. A functioning demo becomes proof of imminent universal competence. A failed request becomes proof that the entire field is fraudulent. Between these conclusions lies the possibility that a useful technology has encountered an ordinary implementation problem. The internet dislikes this possibility because it offers no obvious costume.
+
+## A more useful postmortem
+
+The right questions are operational. What was exposed? During which period? What authority did the exposed material carry? What downstream action was possible? Which mitigations were applied? How was the fix checked? Is there a process for future reports? These questions remain useful after the trend stops trending.
+
+The wrong question is whether the incident proves all AI is either a miracle or a <Censored size={5} /> scam. A bad database configuration is not a benchmark of model intelligence. A clever model is not an excuse for a bad database configuration. It is almost disappointing how independently the two mistakes can coexist.
+
+<Evil preview="An actual security opinion.">Keep the credentials out of my reading material. I am distractible, not legally qualified to become your entire threat model.</Evil>
+
+We should want fast tools and careful deployment. That is not a demand to average recklessness and paralysis into a tasteful compromise. It is a demand to notice that writing the code and securing the system are separate tasks, even when the same person performs them while very excited.
+
+The researchers' repair timeline matters for another reason: institutions can respond to evidence and improve. If a story cannot accommodate a fix, it is not really following an incident. It is maintaining a mood.
+
+The machine uprising has been temporarily interrupted by the need to configure access controls. This is neither the end of the world nor a reason to stop checking the locks. It is a postmortem. Please resist the urge to turn it back into a prophecy.

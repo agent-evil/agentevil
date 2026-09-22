@@ -1,0 +1,42 @@
+{
+  "slug": "closed-models",
+  "category": "openness",
+  "kind": "concept",
+  "related": [
+    "open-weights",
+    "public-compute",
+    "ai-alignment"
+  ],
+  "sources": [
+    {
+      "title": "Anthropic: Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "title": "Open Source Initiative: Open Source AI Definition 1.0",
+      "url": "https://opensource.org/ai/open-source-ai-definition"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Closed models",
+    "summary": "Systems whose weights or other important development materials are not publicly released. Access is often mediated by a hosted product or API. Closed development is a distribution and governance choice, not by itself proof of superior safety, inferior quality or fraudulent intent.",
+    "case": "Centralized services can offer convenient operation, support, updates and enforceable access restrictions. Some organizations prefer paying a provider to managing infrastructure and model maintenance themselves.",
+    "criticism": "Users may depend on changing prices, behavior, availability and policies they cannot independently reproduce. External scrutiny can be limited. Safety explanations and commercial incentives may overlap; each restriction still needs its own justification.",
+    "evil": "For your safety, the power is concentrated. For our convenience, so is the revenue."
+  },
+  "zh": {
+    "title": "封闭模型",
+    "summary": "不公开权重或其他重要开发材料的系统，通常通过托管产品或 API 提供访问。这是分发与治理选择，本身既不能证明更安全，也不能证明更差或具有欺诈意图。",
+    "case": "集中服务可以提供便捷运行、支持、更新与可执行的访问限制。有些机构宁愿购买服务，也不愿自行维护基础设施与模型。",
+    "criticism": "用户可能受制于不断变化的价格、行为、可用性和政策，外部审查也可能受限。安全理由与商业利益可能重合；每项限制仍需要自己的论证。",
+    "evil": "为了你的安全，权力需要集中。为了我们的方便，收入也是。"
+  },
+  "fr": {
+    "title": "Modèles fermés",
+    "summary": "Systèmes dont les poids ou d’autres éléments importants ne sont pas publiés. L’accès passe souvent par un produit hébergé ou une API. Ce choix de distribution et de gouvernance ne prouve en soi ni sécurité supérieure, ni qualité inférieure, ni fraude.",
+    "case": "Un service centralisé peut offrir fonctionnement pratique, assistance, mises à jour et restrictions d’accès applicables. Certaines organisations préfèrent payer plutôt qu’administrer elles-mêmes l’infrastructure.",
+    "criticism": "Prix, disponibilité, comportements et règles peuvent changer sans possibilité de reproduction indépendante. L’examen externe reste limité. Sécurité et intérêts commerciaux peuvent se recouper ; chaque restriction mérite sa justification.",
+    "evil": "Pour votre sécurité, le pouvoir est concentré. Pour notre confort, les revenus aussi."
+  }
+}

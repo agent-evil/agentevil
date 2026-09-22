@@ -1,0 +1,38 @@
+{
+  "slug": "resource-footprint",
+  "category": "planet",
+  "kind": "research",
+  "related": [
+    "public-compute",
+    "techno-optimism",
+    "ai-bubble"
+  ],
+  "sources": [
+    {
+      "title": "IEA: Energy and AI",
+      "url": "https://www.iea.org/reports/energy-and-ai"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AI’s resource footprint",
+    "summary": "The material demands of developing and operating AI, including electricity, water, hardware, infrastructure and supply chains. Training and inference have different profiles. A universal “cost per question” obscures variation in models, hardware, workload, location and how an estimate is calculated.",
+    "case": "Measuring resource use supports better infrastructure decisions and makes environmental tradeoffs visible. Useful applications may save resources elsewhere, but those savings require evidence rather than being assumed.",
+    "criticism": "Efficiency per task can improve while total consumption rises. Local constraints matter, and neither one alarming analogy nor a company-wide renewable claim describes every deployment. Compare real alternatives using explicit system boundaries.",
+    "evil": "The cloud is a building. This revelation has devastated the metaphor department."
+  },
+  "zh": {
+    "title": "AI 的资源足迹",
+    "summary": "开发与运行 AI 的物质需求，包括电力、水、硬件、基础设施与供应链。训练和推理的资源结构不同。统一的“每次提问成本”容易掩盖模型、硬件、负载、地点和计算方法的差异。",
+    "case": "测量资源使用能支持更好的基础设施决策，让环境代价可见。一些应用可能在别处节省资源，但节省量需要证据，不能先行宣布。",
+    "criticism": "单任务效率可能上升，总消耗仍然增长。地方约束很重要，一个惊悚类比或一家公司的可再生能源声明，都不能代表全部部署。应明确系统边界，比较真实替代方案。",
+    "evil": "云，其实是一栋楼。这个发现给比喻部门造成了毁灭性打击。"
+  },
+  "fr": {
+    "title": "Empreinte matérielle de l’IA",
+    "summary": "Ressources nécessaires au développement et à l’usage : électricité, eau, matériel, infrastructures et chaînes d’approvisionnement. Entraînement et inférence diffèrent. Un coût universel « par question » masque les variations de modèle, matériel, charge, lieu et méthode de calcul.",
+    "case": "Mesurer permet de mieux décider et de rendre visibles les compromis environnementaux. Des applications peuvent économiser ailleurs des ressources, mais ces économies doivent être démontrées.",
+    "criticism": "L’efficacité par tâche peut augmenter avec la consommation totale. Les contraintes locales comptent. Une analogie alarmante ou un engagement global ne décrit pas tous les usages. Comparons des alternatives réelles avec un périmètre explicite.",
+    "evil": "Le cloud est un bâtiment. Le service des métaphores ne s’en remet pas."
+  }
+}

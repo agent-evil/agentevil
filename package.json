@@ -1,0 +1,45 @@
+{
+  "name": "agent-evil",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "bun scripts/og.ts && astro build",
+    "preview": "astro preview --host 0.0.0.0",
+    "check": "astro check",
+    "audit:static": "bun scripts/audit.ts",
+    "test:browser": "bun scripts/browser-check.ts",
+    "test:state": "bun scripts/state-check.ts",
+    "test:a11y": "bun scripts/a11y-check.ts",
+    "test:lighthouse": "bun scripts/lighthouse-check.ts",
+    "deploy:production": "wrangler pages deploy dist --project-name agentevil --branch main"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@types/bun": "^1.4.2",
+    "lighthouse": "^13.5.0",
+    "sharp": "^0.35.4",
+    "typescript": "~6.0.3",
+    "wrangler": "^4.135.0"
+  },
+  "packageManager": "bun@1.4.2",
+  "dependencies": {
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/fredoka": "^5.3.0",
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@phosphor-icons/core": "^2.1.1",
+    "astro": "7.3.3",
+    "zod": "^4.6.5"
+  }
+}

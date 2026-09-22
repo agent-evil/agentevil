@@ -1,0 +1,24 @@
+---
+import {copy,path,languages,local,characters,planets,type Lang} from '../lib/i18n';
+import {achievements} from '../lib/game';
+import {themes} from '../themes/registry';
+import Icon from './Icon.astro';
+interface Props {lang:Lang; route:string;}
+const {lang,route}=Astro.props;const t=copy[lang];
+---
+<dialog class="reality-console" id="reality-console" aria-labelledby="console-title">
+ <div class="console-top"><span class="voice-label"><span class="yeti-glyph" aria-hidden="true"><i></i></span>EVIL://REALITY</span><button type="button" data-close-console aria-label={t.close} autofocus><Icon name="x" size={24}/></button></div>
+ <div class="console-content">
+  <div class="console-intro"><p class="eyebrow">{t.console}</p><h2 id="console-title">{t.consoleHeading}</h2><p>{t.consoleDeck}</p><p class="console-greeting" data-greeting>{t.greeting}</p></div>
+  <section class="equipment" aria-labelledby="appearance-label"><div class="equipment-heading"><Icon name="t-shirt"/><h3 id="appearance-label">{t.wardrobe}</h3><span class="item-label">{t.wardrobeItem}</span></div><p>{t.wardrobeDesc}</p><div class="theme-options">{themes.map(theme=><button class="theme-option" type="button" data-theme-choice={theme.id} aria-pressed={theme.id==='terminal'}><span class="swatch" style={`--swatch:${theme.swatch}`} aria-hidden="true"></span>{theme.name}</button>)}</div></section>
+  <section class="equipment" aria-labelledby="language-label"><div class="equipment-heading"><Icon name="globe"/><h3 id="language-label">{t.translator}</h3><span class="item-label">{t.translatorItem}</span></div><p>{t.translatorDesc}</p><div class="segmented">{languages.map((language,i)=><a href={path(language,route)} lang={language} hreflang={language} aria-current={language===lang?'true':undefined}>{['English','简体中文','français'][i]}</a>)}</div></section>
+  <section class="equipment" aria-labelledby="lights-label"><div class="equipment-heading"><Icon name="sun"/><h3 id="lights-label">{t.lights}</h3><span class="item-label">{t.lightsItem}</span></div><p>{t.lightsDesc}</p><div class="segmented">{(['light','dark','system'] as const).map(value=><button type="button" data-light-choice={value} aria-pressed={value==='dark'}>{t[value]}</button>)}</div></section>
+  <section class="equipment" aria-labelledby="lens-label"><div class="equipment-heading"><Icon name="eyeglasses"/><h3 id="lens-label">{t.goggles}</h3><span class="item-label">{t.gogglesItem}</span></div><p>{t.gogglesDesc}</p><div class="segmented">{(['raw','news','pitch','report'] as const).map(value=><button type="button" data-lens-choice={value} aria-pressed={value==='raw'}>{t[value]}</button>)}</div><div class="console-feedback" data-lens-feedback role="status"></div></section>
+  <section class="equipment" aria-labelledby="planet-label"><div class="equipment-heading"><Icon name="planet"/><h3 id="planet-label">{t.telescope}</h3><span class="item-label">{t.telescopeItem}</span></div><p>{t.telescopeDesc}</p><div class="segmented">{Object.entries(planets).map(([value,label])=><button type="button" data-planet-choice={value} aria-pressed={value==='earth'}>{local(label,lang)}</button>)}</div></section>
+  <section class="equipment" aria-labelledby="mute-label"><div class="toggle-line"><div><div class="equipment-heading"><Icon name="eye-slash"/><h3 id="mute-label">{t.hat}</h3></div><p>{t.hatItem} · {t.hatDesc}</p></div><button type="button" data-mute aria-pressed="false" aria-labelledby="mute-label"><span data-mute-text>{t.audible}</span></button></div></section>
+  <section class="passenger-panel" aria-labelledby="passenger-title"><h3 id="passenger-title">{t.passenger}</h3><div data-passenger-idle><p>{t.boardingDeck}</p><button type="button" data-start-boarding>{t.boarding}</button></div><form data-boarding hidden><label for="character">{t.character}</label><select id="character" name="character">{Object.entries(characters).map(([id,names])=><option value={id}>{local(names,lang)}</option>)}</select><div class="passenger-actions"><button type="submit">{t.register}</button><button type="button" data-skip-boarding>{t.noThanks}</button></div></form></section>
+  <section class="equipment"><h3>{t.trophies}</h3><ul class="trophy-list">{Object.entries(achievements).map(([id,a])=><li data-trophy={id} data-unlocked="false"><span aria-hidden="true" data-trophy-mark>○</span> {local(a.name,lang)}<small>{local(a.task,lang)}</small></li>)}</ul></section>
+  <div class="console-bottom"><span>{t.privacy}<br/><kbd>Alt + E</kbd></span><button type="button" data-reset>{t.reset}</button></div>
+ </div>
+</dialog>
+<div class="toast" role="status" aria-live="polite" hidden></div>

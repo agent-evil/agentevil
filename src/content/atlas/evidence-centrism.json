@@ -1,0 +1,38 @@
+{
+  "slug": "evidence-centrism",
+  "category": "discourse",
+  "kind": "editorial",
+  "related": [
+    "doomer-decel",
+    "ai-bubble",
+    "techno-optimism"
+  ],
+  "sources": [
+    {
+      "title": "Agent Evil: Editorial position",
+      "url": "https://agentevil.com/about/"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Evidence-first centrism",
+    "summary": "This publication’s editorial stance: apply the same evidential standards to optimistic and pessimistic claims, including our own. “Center” describes independence from the two rhetorical camps, not a rule that the true answer must lie halfway between them. It is not a recognized scientific school.",
+    "case": "Consistent standards allow a useful tool and a real risk to be recognized at the same time. They also allow a particular debate to be decisively one-sided when that is what the evidence supports.",
+    "criticism": "The posture can become its own vanity: treating detachment as wisdom, demanding impossible certainty only from critics, or selecting convenient extremes. It must be judged by specific claims, corrections and sources, not our flattering description of ourselves.",
+    "evil": "Truth is always in the middle. I just need to choose the endpoints first."
+  },
+  "zh": {
+    "title": "证据中心主义",
+    "summary": "本站的编辑立场：对乐观、悲观和自己的主张使用同一证据标准。“中间”指独立于两个修辞阵营，不是规定真相必须位于两者正中。这不是一个公认的科学学派。",
+    "case": "一致标准让我们同时承认工具有用、风险真实；当证据支持时，也允许某场争论明确地偏向一方。可信度不需要靠均分火力来维持。",
+    "criticism": "这种姿态也可能自恋：把疏离当智慧，只向批评者索取不可能的确定性，或者精挑两端来显示自己高明。应按具体主张、更正与来源评价我们，不按我们的自我介绍。",
+    "evil": "真相当然在中间。我只需要先把两端选好。"
+  },
+  "fr": {
+    "title": "Centrisme fondé sur les preuves",
+    "summary": "La ligne éditoriale de cette publication : appliquer les mêmes exigences aux affirmations optimistes, pessimistes et aux nôtres. Le « centre » désigne l’indépendance envers deux camps rhétoriques, pas l’obligation de trouver la vérité à mi-chemin. Ce n’est pas une école scientifique reconnue.",
+    "case": "Des critères cohérents permettent de reconnaître simultanément un outil utile et un risque réel. Ils permettent aussi de trancher franchement lorsqu’un débat est déséquilibré par les preuves.",
+    "criticism": "Cette posture peut devenir vanité : confondre distance et sagesse, exiger la certitude seulement des critiques ou choisir des extrêmes commodes. Jugez nos affirmations, corrections et sources, pas notre autoportrait.",
+    "evil": "La vérité est toujours au milieu. Il me suffit de choisir les extrémités."
+  }
+}

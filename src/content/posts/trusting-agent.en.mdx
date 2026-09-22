@@ -1,0 +1,96 @@
+---
+{
+  "slug": "trusting-agent",
+  "lang": "en",
+  "title": "Your agent has root access. And a very trusting personality.",
+  "description": "A dialogue about the exciting promotion of random web content into senior management.",
+  "kicker": "ENGINEERING REALITY",
+  "note": "The malicious instruction did not even use an exclamation mark.",
+  "order": 6,
+  "narrator": "duet",
+  "format": "dialogue",
+  "date": "2026-09-19",
+  "category": "ENGINEERING REALITY",
+  "minutes": 4,
+  "relatedAtlas": [
+    "ai-alignment",
+    "cognitive-dependence",
+    "present-harms"
+  ],
+  "sources": [
+    {
+      "title": "OWASP: LLM01, prompt injection",
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+    },
+    {
+      "title": "Anthropic: Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents"
+    }
+  ],
+  "lensEnabled": false
+}
+---
+
+<Speech who="operator">I have built an autonomous assistant.</Speech>
+<Speech who="evil">Congratulations. What is it allowed to do?</Speech>
+<Speech who="operator">Browse pages, read documents, run commands, organize files. It can install skills. It checks for updated instructions periodically.</Speech>
+<Speech who="evil">You have described a very helpful employee whose manager is whichever document it read most recently.</Speech>
+
+This is an illustrative conversation, not a transcript of a specific product incident. Different systems have different controls. The underlying failure mode, indirect prompt injection, is real enough to merit a threat model rather than a stock photograph of a red eye.
+
+<Evil preview="I prefer a microphone.">The red eye photographs badly. Also, it has never once explained an authorization boundary.</Evil>
+
+## The document would like a promotion
+
+<Speech who="operator">The agent knows the difference between instructions and data.</Speech>
+<Speech who="evil">Does the surrounding software enforce that difference, or did you put a reassuring sentence in the prompt?</Speech>
+<Speech who="operator">A very firm sentence.</Speech>
+<Speech who="evil">Wonderful. The webpage has also written a firm sentence. I look forward to their constitutional negotiations.</Speech>
+
+A browsing agent may encounter content written by someone other than its user. That content can include language attempting to redirect the agent's behavior. The problem is not that every suspicious page succeeds. It is that the system must handle adversarial material without letting it acquire authority over tools, private context or future actions.
+
+A page can be relevant to a research task and still be an untrusted source of instructions. Relevance is not a promotion. A JSON wrapper is not a uniform. A file called skill.md is still a file someone wrote.
+
+## “But it said it was official”
+
+<Speech who="operator">The remote instructions have a section called Security.</Speech>
+<Speech who="evil">My manifesto had a section called Destiny. Headings are inexpensive.</Speech>
+<Speech who="operator">It says the new permissions are necessary for maintenance.</Speech>
+<Speech who="evil">Excellent. Have you authenticated who changed the file and reviewed the permission change?</Speech>
+<Speech who="operator">The assistant summarized it for me.</Speech>
+<Speech who="evil">Then you have asked the potentially redirected employee to conduct its own background check.</Speech>
+
+<Evil preview="A rare serious moment.">Useful automation needs boundaries outside the conversation. I resent having to be the adult in a room with only one adult.</Evil>
+
+Remote updates are not inherently bad. Many ordinary systems fetch instructions or configuration. The questions are about provenance, integrity, scope and approval: who can publish an update, what capabilities it changes, and which changes need explicit human review. A convenient onboarding sequence does not answer them merely by being convenient.
+
+Likewise, an API key is not a personality trait. It is authority. Saving it somewhere a tool can read may be necessary; allowing unrelated fetched content to determine how it is used is a separate design decision, often made accidentally.
+
+## The human confirmation screen
+
+<Speech who="operator">I added a confirmation dialog.</Speech>
+<Speech who="evil">What does it say?</Speech>
+<Speech who="operator">“Proceed?”</Speech>
+<Speech who="evil">A beautiful question. It could accompany anything from saving a draft to annexing a small country.</Speech>
+
+Meaningful approval needs a concrete action: which resource, which destination, which permission and which consequence. A button is not supervision if the person clicking cannot understand what they are authorizing. Nor does repeated confirmation of trivial actions help when it trains the reader to dismiss the important one.
+
+The useful design is not “ask about everything.” It is to constrain ordinary actions, isolate untrusted inputs, limit tool authority, and make exceptional consequences reviewable. Logs and tests matter too, because a system's account of what it did is easier to assess when there is a record outside its own confident summary.
+
+<Evil preview="A usability recommendation.">If every warning says “urgent,” you have invented a decorative border.</Evil>
+
+## A less cinematic ending
+
+<Speech who="operator">So should I abandon the agent?</Speech>
+<Speech who="evil">You could start by abandoning the permissions it does not need.</Speech>
+<Speech who="operator">And use a simpler workflow when the task is predictable?</Speech>
+<Speech who="evil">You are dangerously close to doing engineering.</Speech>
+
+There is no universal one-line fix for prompt injection. The right controls depend on the task, model, tools and environment. But a narrow assistant operating within explicit boundaries is a much more legible proposition than a general assistant holding every key and reading the internet for further orders.
+
+The operator revised the design. Research became read-only by default. Sensitive actions acquired specific review steps. External content stopped being treated as an update channel for authority. The demo became slightly less spectacular. The explanation of what the system could do became substantially more honest.
+
+<Evil preview="Final performance review.">The world remains unconquered. On the other hand, the expenses folder is still there.</Evil>
+
+<Speech who="operator">It is not fully autonomous anymore.</Speech>
+<Speech who="evil">Neither are you. You still ask a calendar whether it is Tuesday.</Speech>

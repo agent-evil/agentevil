@@ -1,0 +1,38 @@
+{
+  "slug": "agi-timelines",
+  "category": "futures",
+  "kind": "concept",
+  "related": [
+    "existential-risk",
+    "ai-bubble",
+    "eacc"
+  ],
+  "sources": [
+    {
+      "title": "Google DeepMind: Levels of AGI",
+      "url": "https://arxiv.org/abs/2311.02462"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AGI timelines",
+    "summary": "Forecasts about when systems might reach a specified level of broad cognitive capability. The date is meaningful only alongside a definition, evaluation method and uncertainty range. A forecast of benchmark performance is not automatically a forecast of cheap, reliable replacement of an occupation.",
+    "case": "Explicit forecasts can make assumptions inspectable and improve planning. Different plausible timelines may justify preparing for several scenarios rather than waiting for certainty.",
+    "criticism": "Definitions shift, evaluation can reward narrow competence, and deployment depends on cost, infrastructure and reliability. A confident date with no resolution criteria is difficult to falsify. Disagreement may concern the meaning of AGI more than the calendar.",
+    "evil": "AGI arrives next year. The definition will be updated just before the deadline."
+  },
+  "zh": {
+    "title": "AGI 时间线",
+    "summary": "关于系统何时达到某种广泛认知能力水平的预测。日期必须与定义、评估方法和不确定性范围一起阅读。预测模型通过某项测试，不等于预测它能便宜、可靠地替代整个职业。",
+    "case": "明确预测能让假设接受检查，也能帮助规划。面对几种合理时间线，同时准备不同情景，可能比等待确定性更有用。",
+    "criticism": "定义会移动，评估可能奖励狭窄能力，部署还取决于成本、基础设施与可靠性。没有判定条件的精确日期很难被证伪；争论的对象可能不是日历，而是 AGI 这个词。",
+    "evil": "AGI 明年到。定义将在截止日期前完成更新。"
+  },
+  "fr": {
+    "title": "Calendriers de l’AGI",
+    "summary": "Prévisions sur la date à laquelle des systèmes atteindraient un niveau défini de capacités cognitives générales. Une date exige une définition, une méthode d’évaluation et une incertitude. Réussir un test ne signifie pas remplacer un métier de façon fiable et économique.",
+    "case": "Des prévisions explicites rendent les hypothèses vérifiables et facilitent la préparation à plusieurs scénarios, sans attendre une certitude inaccessible.",
+    "criticism": "Les définitions changent et les évaluations peuvent récompenser une compétence étroite. Le déploiement dépend aussi du coût et de la fiabilité. Sans critères de résolution, une date assurée est difficile à réfuter.",
+    "evil": "L’AGI arrive l’an prochain. La définition sera actualisée juste avant l’échéance."
+  }
+}

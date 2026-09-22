@@ -1,0 +1,38 @@
+{
+  "slug": "public-compute",
+  "category": "governance",
+  "kind": "policy",
+  "related": [
+    "open-source-ai",
+    "ai-sovereignty",
+    "resource-footprint"
+  ],
+  "sources": [
+    {
+      "title": "US National Science Foundation: National AI Research Resource",
+      "url": "https://www.nsf.gov/focus-areas/ai/nairr"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Public compute",
+    "summary": "Publicly supported access to computational infrastructure for research and other public-interest uses. It can include shared facilities, subsidized access and associated datasets or training. A national research resource is one institutional example, not the only possible model.",
+    "case": "Compute costs can exclude researchers and communities from evaluating powerful systems or developing alternatives. Shared resources can support work with social value that is unlikely to attract venture funding.",
+    "criticism": "Allocation is political: who qualifies, who decides priorities and who bears energy costs? Public funding can still flow to private infrastructure providers. Success needs usable access, accountable governance and outputs beyond a ceremonial announcement.",
+    "evil": "A public utility for intelligence. We are currently forming a committee to allocate the queue."
+  },
+  "zh": {
+    "title": "公共算力",
+    "summary": "由公共资源支持、供研究或其他公共利益用途使用的计算基础设施。形式可以是共享设施、补贴访问，以及配套数据和培训。国家级研究资源只是其中一种制度安排。",
+    "case": "算力成本可能把研究者和社群排除在强系统评估及替代方案开发之外。共享资源可以支持有社会价值、却未必能吸引风投的工作。",
+    "criticism": "分配本身就是政治：谁有资格、谁定优先级、谁承担能源成本？公共资金也可能流向私人基础设施商。成功需要可用的访问、可问责的治理，而不只是剪彩。",
+    "evil": "智能的公共事业。我们正在成立委员会，决定谁先排队。"
+  },
+  "fr": {
+    "title": "Calcul public",
+    "summary": "Accès soutenu par des fonds publics à des infrastructures de calcul pour la recherche et d’autres usages d’intérêt général : installations partagées, accès subventionné, données et formation associées. Une ressource nationale n’est qu’un modèle institutionnel possible.",
+    "case": "Le coût du calcul peut exclure chercheurs et communautés de l’évaluation ou du développement d’alternatives. La mutualisation peut soutenir des travaux utiles peu attractifs pour le capital-risque.",
+    "criticism": "Qui est éligible, fixe les priorités et assume le coût énergétique ? L’argent public peut aussi financer des fournisseurs privés. La réussite exige un accès utilisable et une gouvernance responsable, au-delà de l’inauguration.",
+    "evil": "Un service public de l’intelligence. Le comité chargé d’attribuer les places dans la file se réunit bientôt."
+  }
+}

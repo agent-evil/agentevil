@@ -1,0 +1,42 @@
+{
+  "slug": "democratic-governance",
+  "category": "governance",
+  "kind": "policy",
+  "related": [
+    "ai-sovereignty",
+    "public-compute",
+    "creator-consent"
+  ],
+  "sources": [
+    {
+      "title": "OECD: AI Principles",
+      "url": "https://www.oecd.org/en/topics/ai-principles.html"
+    },
+    {
+      "title": "Vitalik Buterin: d/acc, one year later (2025)",
+      "url": "https://vitalik.eth.limo/general/2025/01/05/dacc2.html"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Democratic AI governance",
+    "summary": "Approaches giving affected people a meaningful role in decisions about AI through accountable institutions, participation and contestable rules. This can involve legislatures, public consultation, worker representation or other mechanisms. It is not equivalent to taking an online vote on every technical change.",
+    "case": "AI deployment distributes power and consequences. Technical expertise is necessary, but it does not by itself authorize deciding everyone else’s tradeoffs. Participation can reveal needs and costs that product teams overlook.",
+    "criticism": "Representation, expertise and speed can conflict. Consultations can be performative, powerful groups can dominate and outcomes still require implementation. Evaluate whether participation changes decisions and whether people can challenge harmful uses.",
+    "evil": "Everyone gets a voice. Please note that the microphone is owned by the sponsor."
+  },
+  "zh": {
+    "title": "AI 的民主治理",
+    "summary": "通过可问责制度、参与和可质疑规则，让受影响的人对 AI 决策有实质发言权。机制可能包括立法机关、公众咨询、劳动者代表等，并不等于每次技术调整都全民网投。",
+    "case": "AI 部署会分配权力与后果。专业知识必要，但并不自动授予替所有人决定取舍的权利。参与能揭示产品团队忽略的需求与代价。",
+    "criticism": "代表性、专业性与速度可能冲突；咨询可能走过场，强势群体可能垄断，结果仍需执行。要看参与是否真的改变决策，人们是否能挑战有害用途。",
+    "evil": "人人都可以发声。请注意，麦克风归赞助商所有。"
+  },
+  "fr": {
+    "title": "Gouvernance démocratique de l’IA",
+    "summary": "Approches donnant aux personnes concernées un rôle réel grâce à des institutions responsables, à la participation et à des règles contestables : parlements, consultations, représentation des salariés ou autres mécanismes. Cela ne signifie pas voter en ligne sur chaque modification technique.",
+    "case": "Le déploiement répartit pouvoir et conséquences. L’expertise est nécessaire, sans autoriser à décider seule des compromis de tous. La participation révèle des besoins et coûts ignorés par les équipes produit.",
+    "criticism": "Représentation, expertise et rapidité peuvent entrer en conflit. Les consultations peuvent être décoratives ou dominées par les puissants. Il faut vérifier si elles changent les décisions et permettent de contester les usages nuisibles.",
+    "evil": "Tout le monde a la parole. Le microphone appartient toutefois au sponsor."
+  }
+}

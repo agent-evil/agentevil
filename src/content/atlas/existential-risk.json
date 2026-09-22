@@ -1,0 +1,38 @@
+{
+  "slug": "existential-risk",
+  "category": "safety",
+  "kind": "research",
+  "related": [
+    "pause-ai",
+    "ai-alignment",
+    "present-harms"
+  ],
+  "sources": [
+    {
+      "title": "Center for AI Safety: Statement on AI risk",
+      "url": "https://safe.ai/work/statement-on-ai-extinction-risk"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Existential risk from AI",
+    "summary": "The study and debate of scenarios in which AI contributes to human extinction or a permanent, severe loss of humanity’s future potential. It is not a claim that today’s chatbot is secretly conscious. Proposed mechanisms, probabilities and appropriate responses are contested.",
+    "case": "Even an uncertain low-probability outcome may merit attention when the potential loss is very large. Investigating mechanisms before they are fully realized can be more useful than waiting for a conclusive disaster.",
+    "criticism": "Large stakes do not establish a specific probability or policy. Theories need concrete causal pathways and scrutiny. Attention to distant catastrophe should not erase present harms, and disagreement should not be reduced to whether someone cares about humanity.",
+    "evil": "A serious topic with an unfortunate accessory market in countdown clocks."
+  },
+  "zh": {
+    "title": "AI 存在性风险",
+    "summary": "研究与讨论 AI 可能参与导致人类灭绝，或永久、严重损害人类未来潜力的情景。它不等于声称今天的聊天机器人已秘密觉醒。具体机制、概率与应对方式都存在争议。",
+    "case": "当潜在损失极大时，即使概率低且不确定，也可能值得研究。等灾难充分证明自己后再理解机制，通常不是理想策略。",
+    "criticism": "后果重大不等于某个概率或政策已经成立。理论需要具体因果路径与检验。关注远期灾难不应抹去当前伤害，分歧也不该被简化为是否关心人类。",
+    "evil": "严肃议题。可惜附属产业特别喜欢卖倒计时钟。"
+  },
+  "fr": {
+    "title": "Risque existentiel lié à l’IA",
+    "summary": "Étude et débat de scénarios où l’IA contribuerait à l’extinction humaine ou à une perte permanente et majeure de notre potentiel futur. Il ne s’agit pas d’affirmer qu’un chatbot actuel est secrètement conscient. Mécanismes, probabilités et réponses sont discutés.",
+    "case": "Une issue incertaine et peu probable peut mériter une attention importante si la perte possible est immense. Examiner les mécanismes avant leur réalisation évite d’attendre une catastrophe démonstrative.",
+    "criticism": "L’ampleur des enjeux ne valide ni une probabilité ni une politique. Il faut des chaînes causales précises et examinables. Les catastrophes futures ne doivent pas effacer les dommages présents.",
+    "evil": "Un sujet sérieux, malheureusement assorti d’un marché très dynamique de comptes à rebours."
+  }
+}

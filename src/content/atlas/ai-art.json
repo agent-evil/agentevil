@@ -1,0 +1,38 @@
+{
+  "slug": "ai-art",
+  "category": "culture",
+  "kind": "concept",
+  "related": [
+    "creator-consent",
+    "augmentation",
+    "cognitive-dependence"
+  ],
+  "sources": [
+    {
+      "title": "US Copyright Office: Copyright and Artificial Intelligence",
+      "url": "https://www.copyright.gov/ai/"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AI and art",
+    "summary": "A broad category of practices using AI in making, selecting, modifying or presenting artistic work. It includes different levels of human control and different relationships to existing work. “AI art” names a production feature, not a single style, quality level or ethical verdict.",
+    "case": "New tools can enable experimentation, accessibility and forms of expression that would otherwise be difficult. Artistic value can involve curation, iteration, context and intention as well as manual execution.",
+    "criticism": "Provenance, compensation and disclosure matter, but do not replace aesthetic judgment. Conversely, an appealing image does not resolve the ethics of its production. Arguments are clearer when taste, authorship and rights are discussed separately.",
+    "evil": "The painting stayed the same. The critic’s eyesight updated when the label did."
+  },
+  "zh": {
+    "title": "AI 与艺术",
+    "summary": "在创作、选择、修改或呈现作品时使用 AI 的广泛实践。不同做法包含不同程度的人类控制，也与现有作品有不同关系。“AI 艺术”描述生产特征，不是一种统一风格、质量等级或伦理结论。",
+    "case": "新工具可以支持试验、无障碍参与和原本难以实现的表达。艺术价值可能来自策划、迭代、情境和意图，不只来自手工执行。",
+    "criticism": "来源、报酬与披露很重要，但不能替代审美判断；反过来，好看的图也不能解决生产伦理。把品味、作者身份和权利分开讨论，争论才更清楚。",
+    "evil": "画一动没动。标签更新了，评论家的视力也跟着更新。"
+  },
+  "fr": {
+    "title": "IA et art",
+    "summary": "Ensemble de pratiques utilisant l’IA pour produire, choisir, modifier ou présenter des œuvres. Le contrôle humain et le rapport aux œuvres existantes varient. « Art IA » désigne un aspect de production, pas un style, un niveau de qualité ou un verdict éthique.",
+    "case": "Ces outils peuvent permettre expérimentation, accessibilité et nouvelles expressions. La valeur artistique peut tenir au choix, à l’itération, au contexte et à l’intention, pas uniquement à l’exécution manuelle.",
+    "criticism": "Provenance, rémunération et transparence comptent sans remplacer le jugement esthétique. Une image séduisante ne règle pas l’éthique de sa production. Goût, auteur et droits méritent des discussions distinctes.",
+    "evil": "Le tableau n’a pas changé. La vue du critique s’est mise à jour avec l’étiquette."
+  }
+}

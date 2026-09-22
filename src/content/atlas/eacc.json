@@ -1,0 +1,38 @@
+{
+  "slug": "eacc",
+  "category": "progress",
+  "kind": "movement",
+  "related": [
+    "dacc",
+    "techno-optimism",
+    "existential-risk"
+  ],
+  "sources": [
+    {
+      "title": "e/acc: Principles and tenets (self-description, 2022)",
+      "url": "https://beff.substack.com/p/notes-on-eacc-principles-and-tenets"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Effective accelerationism",
+    "summary": "Usually written e/acc. A self-described movement favoring rapid technological development, competitive experimentation and the expansion of intelligence. Its early manifesto draws on thermodynamics and markets; those arguments are advocacy, not a scientific proof of the optimal pace of AI deployment. Participants do not share one detailed policy platform.",
+    "case": "Innovation can solve material problems, and centralized gatekeepers can protect incumbents while preventing useful experimentation. Delay also has costs. This is a serious challenge to the assumption that restriction is always the cautious choice.",
+    "criticism": "A description of how complex systems evolve does not by itself establish what people ought to value. Who absorbs failed experiments? Which harms are reversible? Supporters differ on openness, governance and the place of biological humans in the future.",
+    "evil": "The universe apparently wants faster deployment. Remarkable that it also agrees with your portfolio."
+  },
+  "zh": {
+    "title": "有效加速主义 e/acc",
+    "summary": "一个自称支持技术快速发展、竞争性试验和智能扩张的运动。早期宣言借用了热力学与市场语言，但这类论证是立场表达，不是关于 AI 最优发展速度的科学定理。参与者并没有统一的详细政策纲领。",
+    "case": "创新确实能解决物质问题，集中审批也可能保护既得利益、阻挡有用的试验。延迟同样有代价，因此“限制一定更谨慎”不是无需论证的结论。",
+    "criticism": "复杂系统怎样演化，并不能直接决定人类应该追求什么。试验失败由谁承担？哪些损害可逆？支持者在开放、治理和生物人类的未来位置上也有分歧。",
+    "evil": "宇宙原来想要更快上线。真巧，它还赞成你的投资组合。"
+  },
+  "fr": {
+    "title": "Accélérationnisme efficace",
+    "summary": "Souvent abrégé e/acc. Ce mouvement revendique un développement technologique rapide, l’expérimentation concurrentielle et l’expansion de l’intelligence. Son manifeste initial invoque la thermodynamique et les marchés : un plaidoyer, pas une démonstration scientifique du rythme optimal de déploiement. Il n’existe pas de programme politique commun détaillé.",
+    "case": "L’innovation peut résoudre des problèmes matériels. Des gardiens centralisés peuvent protéger les acteurs établis et empêcher des expériences utiles. Retarder le progrès a également un coût. Restreindre n’est donc pas automatiquement le choix prudent.",
+    "criticism": "Décrire l’évolution de systèmes complexes ne détermine pas ce que nous devons valoriser. Qui supporte les expériences ratées ? Quels dommages sont réversibles ? Les partisans divergent sur l’ouverture, la gouvernance et le rôle futur des humains biologiques.",
+    "evil": "L’univers exige des déploiements plus rapides. Il partage aussi vos choix d’investissement. Quelle coïncidence."
+  }
+}

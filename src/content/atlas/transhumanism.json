@@ -1,0 +1,38 @@
+{
+  "slug": "transhumanism",
+  "category": "agency",
+  "kind": "movement",
+  "related": [
+    "ai-moral-status",
+    "augmentation",
+    "existential-risk"
+  ],
+  "sources": [
+    {
+      "title": "Humanity+: The Transhumanist Declaration",
+      "url": "https://www.humanityplus.org/the-transhumanist-declaration"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Transhumanism",
+    "summary": "A family of ideas favoring the use of technology to expand human capabilities and overcome some biological limitations. It extends beyond AI to health, longevity and enhancement. The Humanity+ declaration also recognizes risks and individual choice; transhumanism is not simply “replace humans with machines.”",
+    "case": "Reducing involuntary suffering and expanding the options available to people are compelling goals. Existing medicine already changes biological constraints, making the boundary between treatment and enhancement less obvious than it first appears.",
+    "criticism": "Access, consent and social pressure matter. Enhancements can deepen inequality or become effectively mandatory in competitive settings. People also disagree about which changes preserve autonomy and which redefine the values being pursued.",
+    "evil": "Escape the limits of the human body. Terms and conditions may follow you to the next one."
+  },
+  "zh": {
+    "title": "超人类主义",
+    "summary": "支持用技术扩展人类能力、克服部分生物局限的一组思想。范围超出 AI，涉及健康、寿命与增强。Humanity+ 宣言也承认风险与个人选择；它并不简单等于“用机器替换人类”。",
+    "case": "减少非自愿痛苦、扩大人的选择，是有吸引力的目标。现代医学已经在改变生物限制，所以治疗与增强之间的边界，没有初看那么明显。",
+    "criticism": "可及性、同意与社会压力都重要。增强可能扩大不平等，也可能在竞争中变成事实上的强制。哪些改变保留自主性、哪些重新定义了目标价值，仍有争议。",
+    "evil": "逃离人类身体的限制。服务条款可能会跟着你搬进下一个身体。"
+  },
+  "fr": {
+    "title": "Transhumanisme",
+    "summary": "Famille d’idées favorables à l’usage de la technologie pour étendre les capacités humaines et dépasser certaines limites biologiques. Elle concerne aussi santé, longévité et amélioration. La déclaration de Humanity+ reconnaît risques et choix individuels : il ne s’agit pas simplement de remplacer les humains.",
+    "case": "Réduire la souffrance involontaire et élargir les choix sont des objectifs solides. La médecine modifie déjà nos contraintes biologiques ; la frontière entre traitement et amélioration n’est pas évidente.",
+    "criticism": "Accès, consentement et pression sociale comptent. Les améliorations peuvent aggraver les inégalités ou devenir presque obligatoires dans la compétition. Leur rapport à l’autonomie et aux valeurs reste débattu.",
+    "evil": "Échappez aux limites du corps humain. Les conditions générales pourront vous suivre dans le prochain."
+  }
+}

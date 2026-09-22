@@ -1,0 +1,11 @@
+---
+import { getLang, local } from '../lib/i18n';
+interface Props { preview?: string; mars?: string; }
+const {preview=local(['A word from Evil','Evil 有话要说','Un mot d’Evil'],getLang(Astro.url)),mars} = Astro.props;
+---
+<aside class="evil-anchor" data-evil data-mars={mars}>
+ <details class="evil-note" open>
+  <summary><span class="yeti-glyph" aria-hidden="true"><i></i></span><span class="evil-note-name">EVIL</span><span class="evil-preview">{preview}</span><span class="evil-toggle" aria-hidden="true">+</span></summary>
+  <div class="evil-note-text"><slot /></div>
+ </details>
+</aside>

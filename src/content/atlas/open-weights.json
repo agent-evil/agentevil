@@ -1,0 +1,38 @@
+{
+  "slug": "open-weights",
+  "category": "openness",
+  "kind": "concept",
+  "related": [
+    "open-source-ai",
+    "closed-models",
+    "ai-sovereignty"
+  ],
+  "sources": [
+    {
+      "title": "Open Source Initiative: Open Source AI Definition 1.0",
+      "url": "https://opensource.org/ai/open-source-ai-definition"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Open-weight models",
+    "summary": "Models whose learned parameters are made available for others to obtain, subject to the release’s license. This can allow local inference and modification. It does not necessarily include training data, training code or an unrestricted license, so open weights and open source should not be used interchangeably.",
+    "case": "Local operation can improve control, enable research and reduce dependence on a hosted service. A release may be useful even when it falls short of a broader open-source definition.",
+    "criticism": "Restrictions vary, and the practical ability to reproduce training may remain absent. Distribution can also make some safeguards easier to remove. The right question is which capabilities and freedoms a particular release provides.",
+    "evil": "The weights are open. The explanation of how they got that way is in a different department."
+  },
+  "zh": {
+    "title": "开放权重模型",
+    "summary": "把学习得到的参数提供给外界、受具体发布许可约束的模型。这可能允许本地推理与修改，但不一定包含训练数据、训练代码或不受限制的许可证。因此“开放权重”和“开源”不能互换。",
+    "case": "本地运行可以增加控制力、支持研究，减少对托管服务的依赖。即使不符合更广的开源定义，一次权重发布仍可能有实际价值。",
+    "criticism": "不同许可限制不同，复现训练的能力可能仍然缺失。分发也可能让某些保护措施更易移除。应该问的是某次发布具体赋予了哪些能力与自由。",
+    "evil": "权重是开放的。它们怎么来的，归另一个部门解释。"
+  },
+  "fr": {
+    "title": "Modèles à poids ouverts",
+    "summary": "Modèles dont les paramètres appris sont accessibles sous les conditions de leur licence. Cela peut permettre l’inférence locale et la modification, sans nécessairement fournir données, code d’entraînement ou licence sans restriction. Poids ouverts et open source ne sont pas synonymes.",
+    "case": "L’exécution locale peut renforcer le contrôle, permettre la recherche et limiter la dépendance à un service. Une publication peut être utile sans satisfaire une définition plus large de l’open source.",
+    "criticism": "Les restrictions varient et reproduire l’entraînement reste parfois impossible. La distribution peut faciliter le retrait de protections. Il faut examiner les capacités et libertés réellement offertes.",
+    "evil": "Les poids sont ouverts. L’explication de leur origine relève d’un autre service."
+  }
+}

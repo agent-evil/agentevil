@@ -1,0 +1,22 @@
+---
+import Icon from './Icon.astro';
+import { copy, path, languages, localeCode, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; route: string }
+const { lang, route } = Astro.props;
+const t = copy[lang];
+const github = import.meta.env.PUBLIC_GITHUB_URL || 'https://github.com/agent-evil/agentevil';
+---
+<header class="site-header"><div class="shell nav-inner">
+ <a class="brand" href={path(lang)} aria-label="Agent Evil"><span class="yeti-glyph" aria-hidden="true"><i></i></span>AGENT EVIL</a>
+ <nav class="nav-links" aria-label={lang==='zh'?'主导航':lang==='fr'?'Navigation principale':'Main navigation'}>
+  <a href={path(lang,'posts/')} aria-current={route.startsWith('posts')?'page':undefined}>{t.posts}</a>
+  <a href={path(lang,'atlas/')} aria-current={route.startsWith('atlas')?'page':undefined}>{t.atlas}</a>
+  <a href={path(lang,'about/')} aria-current={route==='about/'?'page':undefined}>{t.about}</a>
+ </nav>
+ <div class="top-tools">
+  <details class="language-menu" data-language-menu><summary class="icon-button" aria-label={t.translator} title={t.translator}><Icon name="translate" size={21}/></summary><nav class="language-options" aria-label={t.translator}>{languages.map((language,index)=><a href={path(language,route)} lang={localeCode[language]} hreflang={localeCode[language]} aria-current={language===lang?'true':undefined}>{['English','简体中文','français'][index]}</a>)}</nav></details>
+  <button type="button" class="icon-button" data-toggle-lights aria-label={`${t.lights}: ${t.light}`} title={`${t.lights}: ${t.light}`}><span data-mode-icon="light"><Icon name="sun" size={21}/></span><span data-mode-icon="dark"><Icon name="moon" size={21}/></span></button>
+  {github && <a class="icon-button" href={github} aria-label="GitHub" title="GitHub" data-github-link><Icon name="github-logo" size={21}/></a>}
+  <button type="button" class="icon-button console-trigger" data-open-console aria-label={t.console} title={t.console} aria-haspopup="dialog" aria-controls="reality-console"><Icon name="sliders-horizontal" size={21}/></button>
+ </div>
+</div></header>

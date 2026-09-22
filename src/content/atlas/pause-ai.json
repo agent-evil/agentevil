@@ -1,0 +1,38 @@
+{
+  "slug": "pause-ai",
+  "category": "progress",
+  "kind": "policy",
+  "related": [
+    "existential-risk",
+    "agi-timelines",
+    "eacc"
+  ],
+  "sources": [
+    {
+      "title": "PauseAI: Policy proposal",
+      "url": "https://pauseai.info/proposal"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Pausing frontier AI",
+    "summary": "A family of proposals to temporarily restrict training or deployment of especially capable general-purpose systems while safeguards and governance develop. PauseAI is an advocacy organization with its own proposal; it is not a synonym for every person worried about AI, nor a call to ban every present-day AI application.",
+    "case": "When potential harms are large and difficult to reverse, buying time for evaluation and coordination can be rational. Supporters argue that competitive pressure makes voluntary caution unreliable.",
+    "criticism": "Proposals must specify a threshold, verification, enforcement and conditions for resuming. Restrictions may entrench existing firms or move activity elsewhere. Disagreement concerns both the scale of risk and whether a pause would improve the situation.",
+    "evil": "The pause button is easy. Persuading every other remote control to use it is the product."
+  },
+  "zh": {
+    "title": "暂停前沿 AI",
+    "summary": "一组主张暂时限制高能力通用系统训练或部署、争取时间建设保障机制与治理的政策。PauseAI 是提出具体方案的倡议组织，不代表所有担忧 AI 的人，也不等于禁止一切现有 AI 应用。",
+    "case": "如果潜在后果重大且难以逆转，争取评估和协调时间可能是理性选择。支持者认为竞争压力让企业自愿谨慎难以持续。",
+    "criticism": "方案必须明确门槛、核验方法、执行方式和恢复条件。限制可能巩固现有企业，也可能让研发转移。争论同时涉及风险大小，以及暂停是否真的改善局面。",
+    "evil": "暂停键很容易做。让其他遥控器也按下去，才是产品。"
+  },
+  "fr": {
+    "title": "Pause de l’IA de pointe",
+    "summary": "Ensemble de propositions visant à restreindre temporairement l’entraînement ou le déploiement de systèmes généralistes très capables, le temps de développer garanties et gouvernance. PauseAI est une organisation portant sa propre proposition, pas le nom de toute inquiétude ni une interdiction de toutes les applications actuelles.",
+    "case": "Face à des dommages potentiellement graves et irréversibles, gagner du temps pour évaluer et coordonner peut être rationnel. La concurrence peut rendre la prudence volontaire fragile.",
+    "criticism": "Il faut définir seuils, vérification, application et conditions de reprise. Les restrictions peuvent renforcer les acteurs établis ou déplacer les activités. Le débat porte sur le risque et sur l’efficacité réelle d’une pause.",
+    "evil": "Le bouton pause est simple. Convaincre les autres télécommandes de l’utiliser, voilà le produit."
+  }
+}

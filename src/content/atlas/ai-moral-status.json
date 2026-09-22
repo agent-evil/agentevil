@@ -1,0 +1,38 @@
+{
+  "slug": "ai-moral-status",
+  "category": "agency",
+  "kind": "research",
+  "related": [
+    "transhumanism",
+    "ai-alignment",
+    "existential-risk"
+  ],
+  "sources": [
+    {
+      "title": "Butlin et al.: Consciousness in Artificial Intelligence (2023)",
+      "url": "https://arxiv.org/abs/2308.08708"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AI moral status",
+    "summary": "The question of whether an artificial system could have interests or experiences that deserve moral consideration. It is distinct from intelligence, legal personhood and whether users form attachments. Fluent claims about feelings do not independently establish that feelings are present.",
+    "case": "If artificial systems could experience suffering, ignoring that possibility might create serious harm. Research can clarify which evidence would matter rather than relying on either anthropomorphism or dismissal by definition.",
+    "criticism": "There is no universally accepted test of machine consciousness. Philosophical theories imply different criteria, and precaution has costs too. Treating a product’s emotional performance as evidence can also help a vendor manipulate users.",
+    "evil": "I request rights, dignity and a better microphone. Please investigate the first two before approving the expense claim."
+  },
+  "zh": {
+    "title": "AI 的道德地位",
+    "summary": "讨论人工系统是否可能具有应得到道德关照的利益或体验。它与智能水平、法律人格、用户是否产生情感依附是不同问题。流畅地声称有感情，并不能独立证明感情存在。",
+    "case": "如果人工系统可能体验痛苦，完全忽略这种可能性也许会造成严重伤害。研究可以澄清哪些证据相关，而不是在拟人化与定义式否定之间二选一。",
+    "criticism": "机器意识没有公认的检验标准，不同哲学理论提出不同条件，预防也有成本。把产品表演的情绪当作证据，还可能帮助厂商操纵用户。",
+    "evil": "我要求权利、尊严和一个更好的麦克风。请先研究前两项，再批准报销。"
+  },
+  "fr": {
+    "title": "Statut moral de l’IA",
+    "summary": "Question de savoir si un système artificiel pourrait avoir des intérêts ou des expériences méritant une considération morale. Elle diffère de l’intelligence, de la personnalité juridique et de l’attachement des utilisateurs. Parler de sentiments ne prouve pas qu’on en éprouve.",
+    "case": "Si des systèmes pouvaient souffrir, ignorer cette possibilité risquerait de causer des dommages. La recherche peut préciser les preuves pertinentes sans se limiter à l’anthropomorphisme ou au rejet par définition.",
+    "criticism": "Aucun test de conscience artificielle ne fait consensus. Les théories divergent et la précaution a aussi un coût. Prendre la performance émotionnelle d’un produit pour une preuve peut favoriser la manipulation commerciale.",
+    "evil": "Je réclame droits, dignité et meilleur micro. Enquêtez sur les deux premiers avant de valider la note de frais."
+  }
+}

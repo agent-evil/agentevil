@@ -1,0 +1,42 @@
+{
+  "slug": "present-harms",
+  "category": "safety",
+  "kind": "research",
+  "related": [
+    "existential-risk",
+    "creator-consent",
+    "automation"
+  ],
+  "sources": [
+    {
+      "title": "NIST: AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "OECD: AI Principles",
+      "url": "https://www.oecd.org/en/topics/ai-principles.html"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Present-day AI harms",
+    "summary": "An umbrella for observable harms associated with current systems: discriminatory decisions, privacy failures, fraud, unsafe outputs, exploitation and unequal burdens. These are different problems, not one mechanism. Attribution requires examining the specific system and the institutions deploying it.",
+    "case": "Concrete cases make responsibility and remedies more tractable. People already affected should not have to compete with speculative future scenarios for the right to be taken seriously.",
+    "criticism": "Not every social problem involving software is caused by the model alone. Evidence must distinguish system failures from baseline failures and identify affected groups. A focus on current harms need not deny future risks; the two can share causes and remedies.",
+    "evil": "The future has excellent public relations. The people harmed this morning should hire its agency."
+  },
+  "zh": {
+    "title": "当前 AI 社会伤害",
+    "summary": "涵盖当前系统相关的可观察伤害：歧视性决定、隐私失守、欺诈、不安全输出、剥削与不平等负担。这些问题机制不同。归因必须检查具体系统及其部署机构。",
+    "case": "具体案例让责任与补救更容易落实。已经受到影响的人，不应该还要与未来情景竞争“值得被认真对待”的资格。",
+    "criticism": "不是所有涉及软件的社会问题都由模型单独造成。证据需区分系统新增的失败与原有失败，并说明受影响群体。关注当前伤害不必否认未来风险，两者可能有共同成因与解法。",
+    "evil": "未来的公关真强。今天早上受害的人应该去签同一家代理。"
+  },
+  "fr": {
+    "title": "Dommages actuels de l’IA",
+    "summary": "Catégorie regroupant des dommages observables : décisions discriminatoires, atteintes à la vie privée, fraudes, sorties dangereuses, exploitation et charges inégales. Les mécanismes diffèrent. L’attribution exige d’examiner chaque système et les institutions qui le déploient.",
+    "case": "Les cas concrets permettent d’identifier responsabilités et remèdes. Les personnes déjà touchées ne devraient pas devoir rivaliser avec des scénarios futurs pour être prises au sérieux.",
+    "criticism": "Tout problème social impliquant un logiciel ne vient pas du modèle seul. Il faut comparer aux défaillances existantes et identifier les groupes concernés. Dommages actuels et risques futurs peuvent partager des causes et des solutions.",
+    "evil": "L’avenir dispose d’excellentes relations publiques. Les victimes de ce matin devraient engager son agence."
+  }
+}

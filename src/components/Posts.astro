@@ -1,0 +1,10 @@
+---
+import { getPosts, postText } from '../lib/content';
+import { copy, path, type Lang } from '../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = copy[lang];
+const posts = await getPosts(lang);
+---
+<header class="page-intro"><p class="eyebrow">{t.satire}</p><h1>{t.all}</h1><p class="deck">{t.thesis} {t.thesis2}</p></header>
+<div class="post-list">{posts.map(post => { const p = postText(post, lang); return <article class="story-row"><div><p class="eyebrow">{p.kicker}</p><h2><a href={path(lang, `posts/${p.slug}/`)}>{p.title}</a></h2><p>{p.description}</p><div class="meta"><span>{t[p.narrator]}</span><span>{p.minutes} {t.min}</span></div></div></article>; })}</div>

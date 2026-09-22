@@ -1,0 +1,10 @@
+@layer theme {
+ [data-theme="cartoon"] { --bg:#f7f5ed; --panel:#f5e6b9; --text:#252326; --muted:#625953; --accent:#775414; --line:#b4a694; --display:'Fredoka Variable',sans-serif; --body:'Public Sans Variable',Arial,sans-serif; --headline-weight:550; --radius:12px; color-scheme:light; }
+ [data-theme="cartoon"][data-mode="dark"] { --bg:#242125; --panel:#353039; --text:#faf1d9; --muted:#c3b8ae; --accent:#f6cb52; --line:#665d65; color-scheme:dark; }
+ [data-theme="cartoon"] .masthead { font-size:clamp(58px,12.2vw,166px); letter-spacing:-.06em; }
+ [data-theme="cartoon"] .hero-title { font-size:clamp(36px,4.4vw,60px); }
+ [data-theme="cartoon"] .article-title { font-size:clamp(36px,5.3vw,72px); }
+ [data-theme="cartoon"] .hero-heckle { border:2px solid var(--text); border-radius:12px; box-shadow:5px 5px 0 var(--text); }
+ [data-theme="cartoon"] .lead-art { border-radius:18px; border:2px solid var(--text); }
+ @media(max-width:760px) { [data-theme="cartoon"] .masthead {font-size:12.2vw;} }
+}

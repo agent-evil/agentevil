@@ -1,0 +1,38 @@
+{
+  "slug": "ai-bubble",
+  "category": "futures",
+  "kind": "concept",
+  "related": [
+    "agi-timelines",
+    "closed-models",
+    "automation"
+  ],
+  "sources": [
+    {
+      "title": "Bank of England: Financial Stability Report, December 2025",
+      "url": "https://www.bankofengland.co.uk/financial-stability-report/2025/december-2025"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "The AI bubble thesis",
+    "summary": "The argument that some AI-related valuations or investment expectations exceed plausible future returns. This is an economic claim, not proof that the technology is useless. Useful infrastructure and unsuccessful investments can coexist; an overvalued firm can sell a genuinely helpful product.",
+    "case": "Revenue, durable demand, costs and competition ultimately matter. Distinguishing technical progress from investor returns helps expose stories that turn every capability improvement into a guaranteed profit.",
+    "criticism": "Timing a correction is difficult, and value can appear outside the firms that built the infrastructure. “Bubble” can become an unfalsifiable reaction to anything expensive. Assessments should specify the asset, horizon and assumptions.",
+    "evil": "The technology can work while the spreadsheet is science fiction. Humans have developed this feature independently."
+  },
+  "zh": {
+    "title": "AI 泡沫论",
+    "summary": "认为部分 AI 估值或投资预期超出合理未来回报的观点。这是经济判断，不是技术无用的证明。有用的基础设施和失败的投资可以同时存在；估值过高的公司也可能提供真正有帮助的产品。",
+    "case": "收入、持续需求、成本和竞争终究重要。区分技术进步与投资回报，有助于识别把每次能力提升都包装成必然利润的故事。",
+    "criticism": "调整时点很难预测，价值也可能落到基础设施建设者之外。“泡沫”若只是对昂贵事物的条件反射，同样不可证伪。判断应说明具体资产、时间范围和假设。",
+    "evil": "技术可以是真的，财务表格可以是科幻。这个功能人类早就独立研发出来了。"
+  },
+  "fr": {
+    "title": "La thèse de la bulle IA",
+    "summary": "L’argument selon lequel certaines valorisations ou attentes d’investissement dépassent les rendements futurs plausibles. C’est une thèse économique, pas une preuve d’inutilité technique. Une infrastructure utile peut accompagner de mauvais placements.",
+    "case": "Revenus, demande durable, coûts et concurrence comptent. Séparer progrès technique et rendement financier évite de transformer chaque gain de capacité en bénéfice garanti.",
+    "criticism": "Le calendrier d’une correction est incertain. La valeur peut apparaître ailleurs que chez les bâtisseurs. « Bulle » devient parfois une réaction irréfutable à tout ce qui coûte cher. Il faut préciser actif, horizon et hypothèses.",
+    "evil": "La technologie peut fonctionner alors que le tableur relève de la science-fiction. Une spécialité humaine bien établie."
+  }
+}

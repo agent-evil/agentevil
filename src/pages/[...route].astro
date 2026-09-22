@@ -1,0 +1,55 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Home from '../components/Home.astro';
+import Posts from '../components/Posts.astro';
+import Article from '../components/Article.astro';
+import Atlas from '../components/Atlas.astro';
+import Information from '../components/Information.astro';
+import { getPosts, postText } from '../lib/content';
+import { languages, copy, path, localeCode, type Lang } from '../lib/i18n';
+import { pageDescription, socialImage, socialTagline } from '../lib/seo';
+export async function getStaticPaths() {
+ const atlas = await getCollection('atlas');
+ const routes = [];
+ for (const lang of languages) {
+  for (const route of ['', 'posts/', 'atlas/', 'about/', 'incident/', '404/']) {
+   if (lang === 'en' && (route === '' || route === '404/')) continue;
+   routes.push({params:{route:path(lang,route).slice(1).replace(/\/$/,'')},props:{lang,route}});
+  }
+  for (const post of await getPosts(lang)) {
+   const route = `posts/${post.data.slug}/`;
+   routes.push({params:{route:path(lang,route).slice(1,-1)},props:{lang,route,post}});
+  }
+  for (const entry of atlas) {
+   const route = `atlas/${entry.data.slug}/`;
+   routes.push({params:{route:path(lang,route).slice(1,-1)},props:{lang,route,entry}});
+  }
+ }
+ return routes;
+}
+interface Props { lang: Lang; route: string; post?: CollectionEntry<'posts'>; entry?: CollectionEntry<'atlas'> }
+const { lang, route, post, entry } = Astro.props;
+const t = copy[lang];
+const p = post ? postText(post,lang) : undefined;
+const title = p?.title ?? entry?.data[lang].title ?? ({'posts/':t.all,'atlas/':t.atlasHeading,'about/':t.about,'incident/':t.file,'404/':t.notFound}[route] ?? 'Agent Evil');
+const description = p?.description ?? entry?.data[lang].summary ?? pageDescription(lang,route);
+const og = socialImage(lang,p?.slug);
+const authorURL = new URL(path(lang,'about/#production'),Astro.site).href;
+const atlas = post ? await getCollection('atlas') : [];
+const tags = post?.data.relatedAtlas.map(slug=>atlas.find(item=>item.data.slug===slug)?.data[lang].title).filter((tag): tag is string=>!!tag) ?? [];
+const schema = p && post && {'@context':'https://schema.org','@type':'Article',headline:p.title,description:p.description,datePublished:p.date.toISOString(),inLanguage:localeCode[post.data.lang],author:{'@type':'Person',name:t[p.narrator],url:authorURL},publisher:{'@type':'Organization',name:'Agent Evil',url:Astro.site?.href},image:new URL(og,Astro.site).href,mainEntityOfPage:new URL(path(lang,route),Astro.site).href,genre:t.satire,articleSection:p.kicker,keywords:tags};
+---
+<Base lang={lang} route={route} title={title} description={description} article={!!post} og={og} ogTitle={p?.title ?? socialTagline[lang]}>
+ <Fragment slot="head">
+ {schema && <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\u003c')}/>}
+ {p && <>
+  <meta name="author" content={t[p.narrator]}/>
+  <meta property="article:published_time" content={p.date.toISOString()}/>
+  <meta property="article:author" content={authorURL}/>
+  <meta property="article:section" content={p.kicker}/>
+  {tags.map(tag=><meta property="article:tag" content={tag}/>)}
+ </>}
+ </Fragment>
+ {post ? <Article lang={lang} post={post}/> : entry || route==='atlas/' ? <Atlas lang={lang} entry={entry}/> : route==='posts/' ? <Posts lang={lang}/> : route==='' ? <Home lang={lang}/> : <Information lang={lang} kind={route}/>}
+</Base>

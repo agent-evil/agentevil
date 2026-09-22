@@ -1,0 +1,46 @@
+{
+  "slug": "techno-optimism",
+  "category": "progress",
+  "kind": "concept",
+  "related": [
+    "eacc",
+    "augmentation",
+    "resource-footprint"
+  ],
+  "sources": [
+    {
+      "title": "Marc Andreessen: The Techno-Optimist Manifesto (advocacy, 2023)",
+      "url": "https://a16z.com/the-techno-optimist-manifesto/"
+    },
+    {
+      "title": "Vitalik Buterin: d/acc, one year later (2025)",
+      "url": "https://vitalik.eth.limo/general/2025/01/05/dacc2.html"
+    },
+    {
+      "title": "OECD: AI Principles",
+      "url": "https://www.oecd.org/en/topics/ai-principles.html"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "Technological optimism",
+    "summary": "The broad expectation that technological progress can improve human life. It encompasses conditional, institution-conscious optimism as well as stronger faith in markets or invention. It is not identical to e/acc, and it does not require endorsing every product labeled AI.",
+    "case": "Technologies have expanded what people can do. Progress can relieve scarcity and create options unavailable through redistribution alone. An exclusive focus on failures can hide the cost of technologies never developed.",
+    "criticism": "Benefits are not automatically shared, and some harms appear before institutions adapt. A credible optimistic argument identifies mechanisms, tradeoffs and who benefits, rather than treating historical improvement as a warranty for the next release.",
+    "evil": "I too believe technology can improve life. I remain unclear why this requires your particular app."
+  },
+  "zh": {
+    "title": "技术乐观主义",
+    "summary": "广义上相信技术进步能够改善人类生活。它包括重视制度条件的审慎乐观，也包括对市场或发明更强烈的信心。它不等于 e/acc，更不要求赞成所有贴着 AI 标签的产品。",
+    "case": "技术拓展了人的能力，可能缓解匮乏，创造仅靠重新分配无法得到的选择。只盯着失败，也会忽视那些从未被开发出来的技术所对应的机会成本。",
+    "criticism": "收益不会自动公平分配，一些伤害会先于制度适应出现。可信的乐观论证应说明机制、代价和受益者，而不是把历史上的改善当作下一次发布的保修单。",
+    "evil": "我也相信技术能改善生活。只是还没明白为什么必须是你这款 App。"
+  },
+  "fr": {
+    "title": "Optimisme technologique",
+    "summary": "L’idée générale que le progrès technique peut améliorer la vie humaine. Elle recouvre un optimisme conditionnel attentif aux institutions, mais aussi une confiance plus forte dans les marchés ou l’invention. Elle ne se confond pas avec e/acc et n’impose pas d’approuver tout produit estampillé IA.",
+    "case": "Les technologies étendent les possibilités humaines, réduisent certaines raretés et créent des options que la redistribution seule ne fournit pas. Ne voir que les échecs masque le coût des inventions jamais réalisées.",
+    "criticism": "Les bénéfices ne se répartissent pas automatiquement. Un optimisme crédible explique les mécanismes, les compromis et les bénéficiaires, sans transformer les progrès passés en garantie de la prochaine version.",
+    "evil": "La technologie peut améliorer la vie. Pourquoi faut-il absolument que ce soit votre application ?"
+  }
+}

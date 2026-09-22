@@ -1,0 +1,38 @@
+{
+  "slug": "ai-sovereignty",
+  "category": "governance",
+  "kind": "policy",
+  "related": [
+    "public-compute",
+    "open-weights",
+    "democratic-governance"
+  ],
+  "sources": [
+    {
+      "title": "European Commission: AI Continent Action Plan",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/ai-continent-action-plan"
+    }
+  ],
+  "updated": "2026-09-19",
+  "en": {
+    "title": "AI sovereignty",
+    "summary": "The aim of retaining meaningful control over AI infrastructure, data, capabilities and critical dependencies. Governments, regions and institutions use the term differently. It can mean resilient procurement and local capacity, or a more expansive program of national technological autonomy.",
+    "case": "Dependence on distant providers can limit bargaining power and expose essential services to external policy changes. Local expertise and linguistic capacity can improve resilience and democratic choice.",
+    "criticism": "Complete independence may be costly or unrealistic across chips, software and energy. Sovereignty can become a slogan for protectionism or surveillance. Control by a domestic institution is not automatically control by the people affected.",
+    "evil": "Your data stays in the country. Whether it stays out of the wrong hands is a separate brochure."
+  },
+  "zh": {
+    "title": "AI 主权",
+    "summary": "争取对 AI 基础设施、数据、能力和关键依赖保有实质控制的目标。国家、地区和机构对它的理解不同：可能指采购韧性与本地能力，也可能指更全面的技术自主。",
+    "case": "对远方供应商的依赖可能削弱议价能力，让关键服务受制于外部政策变化。本地专业能力与语言能力可以增加韧性和民主选择。",
+    "criticism": "芯片、软件、能源全链条独立可能昂贵或不现实。主权也可能变成保护主义或监控的口号。由国内机构掌控，不自动等于由受影响的人掌控。",
+    "evil": "你的数据不会出国。它会不会落进不该去的手里，请看另一份宣传册。"
+  },
+  "fr": {
+    "title": "Souveraineté de l’IA",
+    "summary": "Objectif de conserver un contrôle réel sur infrastructures, données, capacités et dépendances critiques. Selon les institutions, le terme désigne des achats résilients et des compétences locales, ou une autonomie technologique nationale plus ambitieuse.",
+    "case": "La dépendance à des fournisseurs lointains peut réduire le pouvoir de négociation et exposer les services essentiels à des décisions externes. Expertise locale et diversité linguistique peuvent élargir les choix démocratiques.",
+    "criticism": "L’indépendance complète coûte cher et peut être irréaliste. La souveraineté peut justifier protectionnisme ou surveillance. Le contrôle par une institution nationale n’est pas automatiquement celui des personnes concernées.",
+    "evil": "Vos données restent au pays. Restent-elles à l’abri des mauvaises mains ? Voir l’autre brochure."
+  }
+}
